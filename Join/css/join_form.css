@@ -1,0 +1,129 @@
+body {
+  background-color: #fafafa;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+#logo_section {
+  width: 100%;
+  height: 45px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  background-color: #0c4da2;
+}
+#logo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  background-image: url('../../images/spiritum.png');
+  background-size: 100%;
+}
+#logo_name {
+  float: left;
+  padding-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fae001;
+}
+#center {
+  margin: 0 auto;
+  width: 700px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding-bottom: 30px;
+}
+#word {
+  margin: 40px 0 30px 550px;
+  font-size: 30px;
+  font-weight: 700;
+}
+#one {
+  padding-top: 50px;
+  padding-left: 40px;
+  font-size: 20px;
+}
+#up, #down,#cancel {
+  width: 100px;
+  padding: 10px 15px;
+  background-color: #0c4da2;
+  border-radius: 7px;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+#down {
+  display: inline-block;
+  margin-top: 60px;
+  margin-left: 220px;
+}
+#cancel {
+  display: inline-block;
+  margin-top: 60px;
+}
+#center #formbox {
+  margin: 30px;
+  width: 550px;
+  margin: 0 auto;
+  padding: 10px;
+}
+#two {
+  width: 250px;
+  height: 30px;
+  float: right;
+  font-size: 20px;
+  margin-right: 10px;
+}
+input {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #777;
+  text-align: center;
+  padding-bottom: 3px;
+}
+input:focus {
+  border-bottom: 2px solid #0c4da2;
+}
+#idform,#pwform,#pw_confirm,#birthform,#nameform {
+  margin: 20px 0;
+}
+#h1,#h2,#h3 {
+  width: 70px;
+  font-size: 20px;
+}
+select {
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+}
+#h11 {
+  font-size: 20px;
+  width: 100px;
+}
+#h22 {
+  font-size: 20px;
+  width: 140px;
+}
+a[id="two"] {
+  margin-left: 5px;
+}
+#address {
+  width: 400px;
+  float: right;
+  font-size: 20px;
+}
+#address2 {
+  float: right;
+  width: 200px;
+  font-size: 20px;
+}
+#bbox {
+  font-size: 20px;
+  float: right;
+}
+#down:hover {
+  cursor: pointer;
+}

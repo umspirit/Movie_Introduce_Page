@@ -1,0 +1,213 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+  font-family: "Nanum Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #eaeaea;
+}
+#content_box {
+  width: 1300px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+#content_box #left_section {
+  float: left;
+  width: 560px;
+  height: 730px;
+  padding: 10px;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+  overflow:auto;
+}
+.movie_section:hover {
+  box-shadow: 0 0 40px gold;
+  cursor: pointer;
+}
+#content_box #right_section {
+  float: left;
+  width: 700px;
+  height: 720px;
+  padding: 10px;
+  margin: 10px 0 0 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+  overflow:auto;
+}
+/*=========================================================
+      LEFT SECTION SETTING
+=========================================================*/
+#content_box .movie_section {
+  width: 520px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.movie_section .img_section {
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 211px;
+  height: 300px;
+  border-radius: 10px 0 0 10px;
+}
+.movie_section .txt_section {
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 309px;
+  height: 300px;
+}
+.movie_section .topic {
+  padding-bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #aeaeae;
+}
+.movie_section .genre,.movie_section .donation,
+.movie_section .open,.watch,.direc,.movie_section .actor {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+#tmp_one,#tmp_two,#tmp_three,#tmp_four,#tmp_five,#tmp_six,#tmp_seven,#tmp_eight,#tmp_nine,#tmp_ten {
+  display: none;
+}
+/*=========================================================
+      RIGHT SECTION SETTING
+=========================================================*/
+#right_section #poster_section {
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 300px;
+  height: 429px;
+}
+#right_section #intro_section {
+  box-sizing: border-box;
+  float: left;
+  width: 350px;
+  height: 429px;
+  padding: 20px;
+}
+#right_section .topic2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555555;
+}
+#right_section .genre2,#right_section .donation2,#right_section .open2,#right_section .watch2,#right_section .direc2 {
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #555555;
+}
+#right_section .direc_img {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 130px;
+  height: 162px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+/*=========================================================
+      ACTOR SECTION SETTING
+=========================================================*/
+#right_section #actor_section {
+  clear: both;
+  margin-left: 15px;
+}
+#right_section #actor_section li {
+  float: left;
+  margin-right: 15px;
+}
+#right_section #actor_section .actor {
+  clear: both;
+  width: 111px;
+  height: 185px;
+}
+#right_section .actor .actor_img {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 111px;
+  height: 139px;
+}
+#right_section .actor .actor_name, .actor .part {
+  font-size: 14px;
+  padding: 4px;
+  text-align: center;
+}
+#right_section .actor .actor_name {
+  font-weight: 600;
+  color: #004cbb;
+}
+#right_section .actor .part {
+  color: #666;
+}
+#right_section #summary {
+  padding: 10px 10px 10px 10px;;
+  font-size: 14px;
+  color: #666;
+}
+/*=========================================================
+      PHOTO SECTION SETTING
+=========================================================*/
+#right_section #photo_section {
+  position: relative;
+  margin-left: 10px;
+}
+#right_section #photo_section ul {
+  overflow:hidden;
+  white-space:nowrap;
+}
+#right_section #photo_section li {
+  position: absolute;
+  float: left;
+}
+#right_section #list_item .photo {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 645px 410px;
+  width: 645px;
+  height: 410px;
+  overflow: auto;
+}
+#right_section #whitebox1 {
+  z-index: 999;
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  left: -20px;
+  width: 20px;
+  height: 410px;
+  background-color: white;
+}
+#right_section #whitebox2 {
+  z-index: 999;
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  left: 645px;
+  width: 20px;
+  height: 410px;
+  background-color: white;
+}
+#right_section #iframe_v {
+  margin-left: 10px;
+}

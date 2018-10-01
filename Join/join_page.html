@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/join_page.css">
+  </head>
+  <body>
+    <section id="logo_section">
+      <a href="../index.html">
+        <div id="logo"></div>
+        <div id="logo_name">영화이야기</div>
+      </a>
+    </section>
+    <div id="word">회원 가입</div>
+    <div id="dot" onclick="goback()"></div>
+    <section id="center">
+      <div id="one">
+        <a>회원가입을 하시면 많은 여행정보를 볼 수 있습니다 !</a>
+      </div>
+      <a href="accept_page.html">
+        <div id="up">
+          만 14세 미만 회원 가입
+        </div>
+      </a>
+      <div id="up14">
+        <a>만 14세 미만이라면?<br>
+           만 14세 미만은 보호자(법적 대리인)와 함께 가입해 주십시오.
+        </a>
+      </div>
+      <a href="accept_page.html">
+        <div id="down">
+          만 14세 이상 회원 가입
+        </div>
+      </a>
+    </section>
+    <script>
+      function goback() {
+        history.back();
+      }
+    </script>
+  </body>
+</html>

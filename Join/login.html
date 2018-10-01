@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>로그인</title>
+  </head>
+  <style>
+  hr {
+    width: 600px;
+    margin: 10px 0;
+  }
+  hr {
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  body {
+    background-color: #f7f7f7;
+    padding: 0;
+    margin: 0;
+  }
+  input {
+    border: 0;
+    border-bottom: 2px solid #aeaeae;
+    outline: none;
+    text-align: center;
+  }
+  input:focus {
+    border-bottom: 3px solid #0c4da2;
+  }
+  #center {
+    width: 100%;
+  }
+  .mainsection {
+    margin: 0 auto;
+    background: white;
+    width: 740px;
+    margin-top: 110px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+  }
+  #head {
+    clear: both;
+    background-color: #0c4da2;
+    width: 600px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  #form {
+    width: 350px;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+  #idpw {
+    margin-left: 25px;
+    float: left;
+    width: 50px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  #loginline {
+    margin-bottom: 20px;
+  }
+  #loginbtn {
+    width: 90px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 130px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  #loginbtn:hover {
+    cursor: pointer;
+  }
+  .in {
+    font-size: 20px;
+    height: 30px;
+  }
+  div > a {
+    color: gray;
+    font-size: 14px;
+  }
+  #findit {
+    margin-left: 50px;
+    margin-top: 5px;
+  }
+  div >a:hover {
+    text-decoration: underline;
+  }
+  #logo_section {
+    width: 100%;
+    height: 45px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background-color: #0c4da2;
+  }
+  #logo {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/spiritum.png');
+    background-size: 100%;
+  }
+  #logo_name {
+    float: left;
+    padding-top: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fae001;
+  }
+  #dot {
+    position: relative;
+    background-image: url('https://account.samsung.com/accounts/v1/resources/images/v2/btn_close.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    float: right;
+    top: -40px;
+  }
+  #dot:hover {
+    cursor: pointer;
+  }
+  </style>
+  <script>
+    function msgprint() {
+      alert("로그인이 완료되었습니다.");
+    }
+  </script>
+  <body>
+    <section id="center">
+      <section id="logo_section">
+        <a href="../index.html">
+          <div id="logo"></div>
+          <div id="logo_name">영화이야기</div>
+        </a>
+      </section>
+      <section class="mainsection">
+        <div id="dot" onclick="dotclick()"></div>
+        <div id="head">
+          로그인
+        </div>
+        <form id="form">
+          <div id="loginline">
+            <div id="idpw">ID </div>
+            <input class="in" id="input_id" type="text" name="" value="" width="200px" height="30px">
+          </div>
+          <div id="pwline">
+            <div id="idpw">PW </div>
+            <input class="in" id="input_pw" type="password" name="" value="" width="200px">
+          </div>
+            <input id="loginbtn" type="button" name="" value="로그인" style="border:0" onclick="checkempty()">
+          <div id="findit">
+            <a href="find_id.html">아이디 찾기 |</a>
+            <a href="find_pw.html">비밀번호 찾기 |</a>
+            <a href="join_page.html">회원가입</a>
+          </div>
+        </form>
+      </section>
+    </section>
+    <script>
+      function dotclick() {
+        history.back();
+      }
+    </script>
+    <script type="text/javascript">
+      function checkempty() {
+        var in_id = document.getElementById('input_id');
+        var in_pw = document.getElementById('input_pw');
+
+        if(in_id.value == "" || in_pw.value == "") {
+          alert('아이디를 입력해주세요..');
+        }
+        else if (in_pw.value == "") {
+          alert('비밀번호를 입력해주세요.');
+        }
+        else {
+          location.href = "../index.html";
+        }
+      }
+    </script>
+  </body>
+</html>

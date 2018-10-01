@@ -1,0 +1,78 @@
+body {
+  background-color: #fafafa;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+#logo_section {
+  width: 100%;
+  height: 45px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  background-color: #0c4da2;
+}
+#logo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  background-image: url('../../images/spiritum.png');
+  background-size: 100%;
+}
+#logo_name {
+  float: left;
+  padding-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fae001;
+}
+#center {
+  margin: 0 auto;
+  width: 700px;
+  height: 550px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+#gain {
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+#word {
+  margin: 40px 0 30px 550px;
+  font-size: 30px;
+  font-weight: 700;
+}
+#one {
+  margin-left: 260px;
+  padding-top: 20px;
+}
+#one #check {
+  position: relative;
+  right: 10px;
+}
+#three {
+  margin-left: 20px;
+  margin-top: 20px;
+  overflow: scroll;
+  width: 640px;
+  height: 300px;
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+#next_btn, #cancel {
+  margin-top: 50px;
+  display: inline-block;
+  width: 100px;
+  padding: 10px 15px;
+  background-color: #0c4da2;
+  border-radius: 7px;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+#next_btn:hover {
+  cursor: pointer;
+}

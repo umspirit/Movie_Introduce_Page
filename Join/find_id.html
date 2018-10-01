@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>로그인</title>
+  </head>
+  <style>
+  hr {
+    width: 600px;
+    margin: 10px 0;
+  }
+  hr {
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  body {
+    background-color: #f7f7f7;
+    padding: 0;
+    margin: 0;
+  }
+  input {
+    border: 0;
+    border-bottom: 2px solid #aeaeae;
+    outline: none;
+    text-align: center;
+  }
+  input:focus {
+    border-bottom: 3px solid #0c4da2;
+  }
+  #center {
+    width: 100%;
+  }
+  .mainsection {
+    margin: 0 auto;
+    background: white;
+    width: 740px;
+    margin-top: 110px;
+    padding-bottom: 50px;
+    padding-top: 70px;
+  }
+  #head {
+    clear: both;
+    background-color: #0c4da2;
+    width: 600px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  #form {
+    width: 370px;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+  #idpw {
+    margin-left: 0px;
+    float: left;
+    width: 100px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  #loginline {
+    margin-bottom: 20px;
+  }
+  #loginbtn {
+    width: 90px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 130px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  #loginbtn:hover {
+    cursor: pointer;
+  }
+  #in {
+    font-size: 20px;
+    height: 30px;
+    width: 260px;
+    padding-bottom: 5px;
+  }
+  #in:focus {
+    font-size: 20px;
+  }
+  div > a {
+    color: gray;
+    font-size: 14px;
+  }
+  #findit {
+    margin-left: 50px;
+    margin-top: 5px;
+  }
+  div >a:hover {
+    text-decoration: underline;
+  }
+  #logo_section {
+    width: 100%;
+    height: 45px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background-color: #0c4da2;
+  }
+  #logo {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/spiritum.png');
+    background-size: 100%;
+  }
+  #logo_name {
+    float: left;
+    padding-top: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fae001;
+  }
+  #bbox {
+    width: 390px;
+  }
+  select {
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+  }
+  </style>
+  <script>
+    function msgprint() {
+      alert("로그인이 완료되었습니다.");
+    }
+  </script>
+  <body>
+    <section id="center">
+      <section id="logo_section">
+        <a href="../index.html">
+          <div id="logo"></div>
+          <div id="logo_name">영화이야기</div>
+        </a>
+      </section>
+      <section class="mainsection">
+        <div id="head">
+          아이디 찾기
+        </div>
+        <form id="form">
+          <div id="loginline">
+            <div id="idpw">이름 </div>
+            <input id="in" type="text" height="30px">
+          </div>
+          <div id="pwline">
+            <div id="idpw">생년월일 </div>
+            <div id="birthform" style="padding-bottom:5px">
+              <div id="bbox">
+                <select id="s1" name="">
+                  <option value="1">1994</option>
+                </select>
+                <a id="s1">년</a>
+                <select id="s1" name="">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <a id=s1>월</a>
+                <select id="s1" name="">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+                <a id="s1">일</a>
+              </div>
+          </div>
+          <input id="loginbtn" type="button" name="" value="찾기" style="border:0" onclick="checkempty()">
+        </form>
+      </section>
+    </section>
+    <script>
+      function dotclick() {
+        history.back();
+      }
+    </script>
+    <script>
+      function checkempty() {
+        var gt = document.getElementById('in');
+
+        if(gt.value == "") {
+          alert("이름을 입력해주세요.");
+        }
+        else {
+          alert('아이디는 201301968 입니다.');
+          location.href = "login.html";
+        }
+      }
+    </script>
+  </body>
+</html>

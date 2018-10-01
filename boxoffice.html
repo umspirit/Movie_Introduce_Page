@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html onclick="inputclick()">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="boxoffice_style.css">
+    <script>
+      function inputclick() {
+        var input = document.getElementById('search_input');
+        var win = document.getElementById('inner_win');
+        var pic = document.getElementById('picc');
+
+        if(input.id == document.activeElement.id) {
+          input.style.backgroundColor = "white";
+          win.style.backgroundColor = "white";
+          pic.src = "images/search2.png";
+        }
+        else {
+          input.style.backgroundColor = "#c3c3c3";
+          win.style.backgroundColor = "#c3c3c3";
+          pic.src = "images/search.png";
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      function gopage(txt) {
+        var ifm = document.getElementById('ifm');
+        var all = document.getElementsByClassName('liall');
+        var gd;
+
+        document.getElementById('li_second').style.borderBottom = "";
+        document.getElementById('li_third').style.borderBottom = "";
+        document.getElementById('li_fourth').style.borderBottom = "";
+        document.getElementById('li_fifth').style.borderBottom = "";
+
+        if(txt == 'boxoffice') {
+          ifm.src = 'recent_movie.html';
+          gd = document.getElementById('li_second');
+          gd.style.borderBottom = "6px solid #ef0000";
+        }
+        else if(txt == 'recommend') {
+          ifm.src = 'recommend.html';
+          gd = document.getElementById('li_third');
+          gd.style.borderBottom = "6px solid #ef0000";
+        }
+        else if(txt == 'genre') {
+          ifm.src = 'genre.html';
+          gd = document.getElementById('li_fourth');
+          gd.style.borderBottom = "6px solid #ef0000";
+        }
+        else if(txt == 'schedule') {
+          ifm.src = 'schedule.html';
+          gd = document.getElementById('li_fifth');
+          gd.style.borderBottom = "6px solid #ef0000";
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      function load() {
+        var para = document.location.href.split("=");
+        gopage(para[para.length - 1]);
+      }
+    </script>
+  </head>
+  <body onload="load()">
+    <header id="header_section">
+      <section id="center">
+        <a href="index.html">
+          <section style="cursor:pointer;">
+            <span id="img">
+              <img src="images/spiritum.png" alt="">
+            </span>
+            <span id="logoname">영화이야기</span>
+          </section>
+        </a>
+        <div id="menu">
+          <ol>
+            <li class="liall" id="li_second" onclick="gopage('boxoffice')">박스오피스</li>
+            <li class="liall" id="li_third" onclick="gopage('recommend')">추천 영화</li>
+            <li class="liall" id="li_fourth" onclick="gopage('genre')">장르별 영화</li>
+            <li class="liall" id="li_fifth" onclick="gopage('schedule')">개봉 예정</li>
+          </ol>
+        </div>
+        <div id="loginjoin">
+          <a href="Join/login.html"><span id="loginbtn">로그인</span></a>
+          <a href="Join/join_page.html"><span id="joinbtn">회원가입</span></a>
+        </div>
+      </section>
+      <section id="search_section">
+        <section id="search_window">
+          <div id="inner_win">
+            <span id="search_picture">
+              <img id="picc" src="images/search.png" alt="" width="23" height="23">
+            </span>
+            <input id="search_input" type="text">
+          </div>
+        </section>
+      </section>
+    </header>
+    <section id="mid">
+      <iframe id="ifm" src=""></iframe>
+    </section>
+    <span id="parent_value" style="display:none"></span>
+  </body>
+</html>

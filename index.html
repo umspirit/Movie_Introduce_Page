@@ -1,0 +1,2860 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>영화이야기 : 영화 추천 사이트</title>
+  <link rel="stylesheet" href="index_style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script>
+    function setChildValue(index) {
+      window.location.href = "boxoffice.html?index=" + index;
+   }
+  </script>
+</head>
+<body>
+  <nav id="nav_section">
+    <section id="contentbox">
+      <section id="loginline">
+        <a href="Join/login.html">
+          <div class="menu">로그인</div>
+        </a>
+        <a href="Join/join_page.html">
+          <div class="menu">회원가입</div>
+        </a>
+      </section>
+    </section>
+  </nav>
+  <header id="header_section">
+    <section id="mainlogo">
+      <div id="logo">
+        <img src="images/spiritum.png" alt="" width="80" height="80">
+      </div>
+      <div id="topic"><a href="index.html">영화이야기</a></div>
+    </section>
+    <section id="menu_section">
+      <div id="menus">
+        <ul>
+          <span onclick="setChildValue('boxoffice')">박스오피스</span>
+          <span onclick="setChildValue('recommend')">추천 영화</span>
+          <span onclick="setChildValue('genre')">장르별 영화</span>
+          <span onclick="setChildValue('schedule')">개봉예정 영화</span>
+        </ul>
+      </div>
+    </section>
+  </header>
+  <section id="recent_open">
+    <span id="leftbtn"></span>
+    <span id="rightbtn"></span>
+    <ul>
+      <li id="list_item">
+        <section class="in" id="one">
+          <section class="movie_intro">
+            <div class="int" style="font-size:18px; padding-top:25px">현재 상영작</div>
+            <div class="int" style="font-size:30px; font-weight:600">범 죄 도 시</div>
+            <div class="int">관람 평점 : 9.31 점 / 예매율 : 51.23%</div>
+            <div class="int">2017, 한국, 액션, 2시간 1분</div>
+            <div class="int">감독 : 강윤성 , 배우 : 마동석, 윤계상, 조재윤 </div>
+          </section>
+        </section>
+      </li>
+      <li id="list_item">
+        <section class="in" id="two">
+          <section class="movie_intro">
+            <div class="int" style="font-size:18px; padding-top:25px">현재 상영작</div>
+            <div class="int" style="font-size:30px; font-weight:600">남 한 산 성</div>
+            <div class="int">관람 평점 : 8.18 점 / 예매율 : 11.05%</div>
+            <div class="int">2017, 한국, 드라마, 2시간 19분</div>
+            <div class="int">감독 : 황동혁 , 배우 : 이병헌, 김윤석, 박해일, 고수 </div>
+          </section>
+        </section>
+      </li>
+      <li id="list_item">
+        <section class="in" id="three">
+          <section class="movie_intro">
+            <div class="int" style="font-size:18px; padding-top:25px">현재 상영작</div>
+            <div class="int" style="font-size:30px; font-weight:600">희 생 부 활 자</div>
+            <div class="int">관람 평점 : 6.65 점 / 예매율 : 10.21%</div>
+            <div class="int">2017, 한국, 미스터리, 스릴러, 1시간 31분</div>
+            <div class="int">감독 : 곽경택 , 배우 : 김래원, 김해숙, 성동일, 전혜진 </div>
+          </section>
+        </section>
+      </li>
+      <li id="list_item">
+        <section class="in" id="four">
+          <section class="movie_intro">
+            <div class="int" style="font-size:18px; padding-top:25px">현재 상영작</div>
+            <div class="int" style="font-size:30px; font-weight:600">킹 스 맨 : 골 든 서 클</div>
+            <div class="int">관람 평점 : 8.63 점 / 예매율 : 8.18%</div>
+            <div class="int">2017, 영국, 미국, 드라마, 2시간 21분</div>
+            <div class="int">감독 : 매튜 본 , 배우 : 콜린 퍼스, 줄리안 무어, 태런 에저튼</div>
+          </section>
+        </section>
+      </li>
+      <li id="list_item">
+        <section class="in" id="five">
+          <section class="movie_intro">
+            <div class="int" style="font-size:18px; padding-top:25px">현재 상영작</div>
+            <div class="int" style="font-size:30px; font-weight:600">아 이 캔 스 피 크</div>
+            <div class="int">관람 평점 : 9.24 점 / 예매율 : 5.19%</div>
+            <div class="int">2017, 한국, 드라마, 1시간 59분</div>
+            <div class="int">감독 : 김현석 , 배우 : 나문희, 이제훈, 박철민</div>
+          </section>
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section id="first_box">
+    <div id="firstbox_intro">박스오피스 순위</div>
+    <section id="left_1">
+      <div class="hover_intro2">
+        <div id="top_board">범죄도시</div>
+        <div id="floor_board">
+          <div>평점 : <a style="color:red">9.23 점</a></div>
+          <div>2017.10.13 개봉</div>
+          <div>장르 : 드라마</div>
+          <div>감독 : 강윤성</div>
+          <div>출연 : 마동석, 윤계상, 조재윤, 최귀화</div>
+          <div>연령 : <a style="color:red">청소년 관람불가</a></div>
+          <span id="intro_btn" class="mdbtn" onclick="modalclick(1)">자세히 보기</span>
+        </div>
+      </div>
+    </section>
+    <section id="left_2">
+      <div id="one">
+        <div class="hover_intro" onmouseover="up()">
+          <div id="top_board">지오스톰</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">7.20 점</a></div>
+            <div>2017.10.19 개봉</div>
+            <div>장르 : 액션, SF, 스릴러</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(2)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">대장 김창수</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">7.20 점</a></div>
+            <div>2017.10.19 개봉</div>
+            <div>장르 : 액션, SF, 스릴러</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(3)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_3">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">남한산성</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">8.19 점</a></div>
+            <div>2017.10.03 개봉</div>
+            <div>장르 : 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(4)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">부라더</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">9.23 점</a></div>
+            <div>2017.11.02 개봉</div>
+            <div>장르 : 코미디</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(5)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_4">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">블레이드 러너 2049</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">7.93 점</a></div>
+            <div>2017.10.12 개봉</div>
+            <div>장르 : 액션, SF</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(6)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">노 게임 노 라이프 -제로-</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">7.20 점</a></div>
+            <div>2017.10.19 개봉</div>
+            <div>장르 : 액션, SF, 스릴러</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(7)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="box_office">
+      <div style="padding:10px 0px 10px 10px; border-bottom:1px solid white; font-weight:600">영화 랭킹</div>
+      <div class="rank">
+        <span class="rank_num">1</span>
+        <span class="rank_topic">범죄도시</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">2</span>
+        <span class="rank_topic">지오스톰</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">3</span>
+        <span class="rank_topic">대장 김창수</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">4</span>
+        <span class="rank_topic">남한산성</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">5</span>
+        <span class="rank_topic">부라더</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">6</span>
+        <span class="rank_topic">블레이더 러너 2049</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">7</span>
+        <span class="rank_topic">노 게임 노 라이프</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">8</span>
+        <span class="rank_topic">킹스맨: 골든 서클</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num">9</span>
+        <span class="rank_topic">아이 캔 스피크</span>
+      </div>
+      <div class="rank">
+        <span class="rank_num" style="padding:2px 4px 3px 2px">10</span>
+        <span class="rank_topic">마더!</span>
+      </div>
+    </section>
+  </section>
+  <section id="second_box">
+    <div id="secondbox_intro">개봉예정 영화 & 기대작</div>
+    <section id="left_1">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">너의 췌장을 먹고 싶어</div>
+          <div id="floor_board">
+            <div>국가 : 일본 / 12세 관람가</a></div>
+            <div>2017 .10.25 개봉</div>
+            <div>장르 : 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(8)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">튤립 피버</div>
+          <div id="floor_board">
+            <div>국가 : 영국, 미국</div>
+            <div>2017 .10 개봉</div>
+            <div>장르 : 드라마, 멜로/로맨스</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(9)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_2">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">직쏘</div>
+          <div id="floor_board">
+            <div>국가 : 미국 / 18세 관람가</a></div>
+            <div>2017 .11.02 개봉</div>
+            <div>장르 : 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(10)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">침묵</div>
+          <div id="floor_board">
+            <div>국가 : 한국 / 15세 관람가</a></div>
+            <div>2017 .11.02 개봉</div>
+            <div>장르 : 코미디</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(11)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_3">
+      <div class="hover_intro2">
+        <div id="top_board">토르 : 라그나로크</div>
+        <div id="floor_board">
+          <div>국가 : 미국 / 12세 관람가</div>
+          <div>2017 .10.25 개봉</div>
+          <div>장르 : 액션, 모험, 판타지, SF</div>
+          <div>감독 : 타이카 와이티티</div>
+          <div>출연 : 크리스 헴스워스, 마크 러팔로, 톰 히들스턴</div>
+          <div>시간 : 2시간 10분</div>
+          <span id="intro_btn" class="mdbtn" onclick="modalclick(12)">자세히 보기</span>
+        </div>
+      </div>
+    </section>
+    <section id="left_4">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">미옥</div>
+          <div id="floor_board">
+            <div>국가 : 한국</a></div>
+            <div>2017 .11.09 개봉</div>
+            <div>장르 : 느와르, 범죄, 액션</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(13)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">모범생</div>
+          <div id="floor_board">
+            <div>국가 : 한국 / 청불</div>
+            <div>2017 .11.17 개봉</div>
+            <div>장르 : 스릴러</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(14)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_5">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">꾼</div>
+          <div id="floor_board">
+            <div>국가 : 한국</div>
+            <div>2017 .11 개봉</div>
+            <div>장르 : 범죄</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(15)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">신과함께</div>
+          <div id="floor_board">
+            <div>국가 : 한국</a></div>
+            <div>2017 .12.20 개봉</div>
+            <div>장르 : 판타지, 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(16)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="third_box">
+    <div id="thirdbox_intro">장르별 영화</div>
+    <section id="box_office">
+      <div class="rank">
+        <span class="rank_topic">  1000만 관객 영화</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">스릴러</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">로맨스 / 멜로</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">SF</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">느와르</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">액션</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">범죄</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">드라마</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">코미디</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">전쟁</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">다큐멘터리</span>
+      </div>
+      <div class="rank">
+        <span class="rank_topic">공포</span>
+      </div>
+    </section>
+    <section id="left_1">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">명량</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">8.87 점</a></div>
+            <div>2014.07.30 개봉</div>
+            <div>장르 : 액션, 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(17)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">아바타</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">9.06 점</a></div>
+            <div>2009.12.17 개봉</div>
+            <div>장르 : SF, 모험, 액션</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(18)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_2">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">도둑들</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">7.60 점</a></div>
+            <div>2012.07.25 개봉</div>
+            <div>장르 : 액션, 액션, 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(19)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">7번방의 선물</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">8.86 점</a></div>
+            <div>2013.01.23 개봉</div>
+            <div>장르 : 코미디</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(20)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_3">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">광해</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">9.23 점</a></div>
+            <div>2012.09.13 개봉</div>
+            <div>장르 : 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(21)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">변호인</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">9.28 점</a></div>
+            <div>2013.12.18 개봉</div>
+            <div>장르 : 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(22)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_4">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">해운대</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">7.5 점</a></div>
+            <div>2009.07.22 개봉</div>
+            <div>장르 : 모험, 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(23)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">괴물</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">8.61 점</a></div>
+            <div>2006.07.27 개봉</div>
+            <div>장르 : 액션, 모험, 스릴러</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(24)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="left_5">
+      <div id="one">
+        <div class="hover_intro">
+          <div id="top_board">왕의 남자</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">9.2 점</a></div>
+            <div>2005.12.29 개봉</div>
+            <div>장르 : 드라마</div>
+            <span id="intro_btn" class="mdbtn" onclick="modalclick(25)">자세히 보기</span>
+          </div>
+        </div>
+      </div>
+      <div id="two">
+        <div class="hover_intro">
+          <div id="top_board">겨울왕국</div>
+          <div id="floor_board">
+            <div>평점 : <a style="color:red">9.2 점</a></div>
+            <div>2014.01.16 개봉</div>
+            <div>장르 : 애니메이션, 모험</div>
+            <div id="intro_btn" class="mdbtn" onclick="modalclick(26)">자세히 보기</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <footer id="footer_section">
+    <section id="area">
+      <div id="line_one">
+        <span style="float:left">
+          <img src="images/spiritum.png" alt="" width="70" height="70">
+        </span>
+        <span id="pagename">영화이야기</span>
+      </div>
+      <div id="line_two">
+         Copyright © 2017 by spiritum. Inc. All rights reserved
+      </div>
+      <div id="line_three">
+         Powered by <a href="intro/Myintro.html" style="color:#800000; font-weight:600">UM JUNG KI</a>
+      </div>
+      <div id="sns">
+        <a href="http://www.facebook.com"><span id="facebook" onmouseover=""></span></a>
+        <a href="http://twitter.com/"><span id="twitter" onmouseover=""></span></a>
+        <a href="http://www.instagram.com"><span id="insta" onmouseover=""></span></a>
+      </div>
+    </section>
+  </footer>
+  <section class="modal_section" onclick="modalclose()">
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto">
+        <ul>
+          <li id="lst_itm">
+            <section class="modal_in" id="one" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2'); background-position: 20% 20%;"></section>
+          </li>
+          <li id="lst_itm">
+            <section class="modal_in" id="two" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2'); background-position: 20% 20%;"></section>
+          </li>
+          <li id="lst_itm">
+            <section class="modal_in" id="three" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2'); background-position: 20% 20%;"></section>
+          </li>
+        </ul>
+      </section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1504488858/z5lw3rf68bdr4fu16apw.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">범죄도시</div>
+              <div id="modal_movie_info">2017, 한국, 액션, 2시간 1분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">인간이 기후를 조작한다 지구의 대재앙이 시작됐다. 가까운 미래, 기후변화로 인해 지구에 갖가지 자연재해가 속출한다. 세계 정부 연합은 더 이상의 재난을 예방하기 위해 세계 인공위성 조직망을 통해 날씨를 조종할 수 있는 '더치보이 프로그램'을 개발한다. 하지만 프로그램에 문제가 생기면서 두바이의 쓰나미와 홍콩의 용암 분출, 리우의 혹한, 모스크바의 폭염까지, 세계 곳곳에서 일어날 수 없는 기상이변이 일어나는데...</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/0d06acb8e77896ce8eed.jpg?1436183256')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">강윤성</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/40246078ef76b16e30e3.jpg?1436018093')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">마동석</div>
+                  <div class="modal_div" style="float:left; color:#999">마석도 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/4a46bef3b3df4b3bfe63.jpg?1436181126')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">윤계상</div>
+                  <div class="modal_div" style="float:left; color:#999">제이크 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/1484d49d2069aac57d9e.jpg?1436010658')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">조재윤</div>
+                  <div class="modal_div" style="float:left; color:#999">맥스 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e218cb2f7dd7cc631349.jpg?1436181617')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">최귀화</div>
+                  <div class="modal_div" style="float:left; color:#999">사라 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d1116b6eb9a0c7ebf948.jpg?1436213454')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">진선규</div>
+                  <div class="modal_div" style="float:left; color:#999">던컨 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()">
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1507096700/e77wuxu0nnwevycsaghw.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">지오스톰</div>
+              <div id="modal_movie_info">Geostorm, 2017, 미국, 액션, SF, 스릴러, 12세 관람가, 1시간 49분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">“오늘 밤, 다 쓸어버린다!” 2004년 서울… 하얼빈에서 넘어와 단숨에 기존 조직들을 장악하고, 가장 강력한 세력인 춘식이파 보스 '황사장'(조재윤)까지 위협하며 도시 일대의 최강자로 급부상한 신흥범죄조직의 악랄한 보스 '장첸'(윤계상). 대한민국을 뒤흔든 장첸 일당을 잡기 위해 오직 주먹 한방으로 도시의 평화를 유지해 온 괴물형사 '마석도'(마동석)와 인간미 넘치는 든든한 리더 '전일만'(최귀화) 반장이 이끄는 강력반은 나쁜 놈들을 한방에 쓸어버릴 작전을 세우는데…</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/217164c095c0b245af71.jpg?1436209350')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">딘 데블린</div>
+                  <div class="modal_div" style="float:left">Dean Devlin</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/1992654f9f39d8168fee.jpg?1500091328')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">캐서린 윈닉</div>
+                  <div class="modal_div" style="float:left; color:#999">올리비아 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/4313a7e0b9c9db6bd280.jpg?1506442632')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">제라드 버틀러</div>
+                  <div class="modal_div" style="float:left; color:#999">제이크 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/b80774694d1d58f2edc1.jpg?1436198798')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">짐 스터게스</div>
+                  <div class="modal_div" style="float:left; color:#999">맥스 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e449b9732eb0faff4050.jpg?1496914723')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">애비 코니쉬</div>
+                  <div class="modal_div" style="float:left; color:#999">사라 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/90120102aefd1b265a0c.jpg?1453833616')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">로버트 시한</div>
+                  <div class="modal_div" style="float:left; color:#999">던컨 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()">
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1508474345/bc86w74x2qsef135ojja.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">대장 김창수</div>
+              <div id="modal_movie_info">MAN OF WILL, 2017, 한국, 드라마, 12세 관람가, 1시간 55분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">1896년 황해도 치하포, 청년 김창수가 일본인을 죽이고 체포된다. 그는 재판장에서 국모의 원수를 갚았을 뿐이라고 소리치지만 결국 사형 선고를 받고 인천 감옥소에 수감된다. 일본의 편에 선 감옥소장 강형식은 자신에게 굴복하지 않는 김창수를 갖은 고문으로 괴롭히고 죄수들마저 김창수에게 등을 돌린다. 하지만 그 곳은 그에게만 지옥이 아니었다. 못 배우고, 못 가졌다는 이유로 재판조차 받지 못한 채 억울한 옥살이를 하는 조선인들을 보며 김창수는 조금씩 현실에 눈을 뜨게 되고, 변화를 꿈꾸기 시작한다. 천하고 평범한 청년이 대장 김창수로 거듭나기까지 그의 모든 것을 바꿔놓은 625일의 이야기.</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/5012f346b4d0b7050580.jpg?1478499410')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이원태</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/52d7fdd513e161f69696.jpg?1436188973')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">조진웅</div>
+                  <div class="modal_div" style="float:left; color:#999">김창수 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/c3cf664dacf8b28d610f.jpg?1436014415')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">송승헌</div>
+                  <div class="modal_div" style="float:left; color:#999">강형식 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/4831de16b47776f7510b.jpg?1436178770')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">정만식</div>
+                  <div class="modal_div" style="float:left; color:#999">마상구 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/19a00ea7dc647b478487.jpg?1436208831')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">정진영</div>
+                  <div class="modal_div" style="float:left; color:#999">고진사 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/eb60716559613a83a278.jpg?1436189862')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">유승목</div>
+                  <div class="modal_div" style="float:left; color:#999">이영달 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('http://movie.phinf.naver.net/20171013_225/1507872096788TxEL5_JPEG/movie_image.jpg?type=m886_590_2')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">남한산성</div>
+              <div id="modal_movie_info">The Fortress, 2017, 한국, 드라마, 15세 관람가, 2시간 19분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">1636년 인조 14년 병자호란. 청의 대군이 공격해오자 임금과 조정은 적을 피해 남한산성으로 숨어든다. 추위와 굶주림, 절대적인 군사적 열세 속 청군에 완전히 포위된 상황, 대신들의 의견 또한 첨예하게 맞선다. 순간의 치욕을 견디고 나라와 백성을 지켜야 한다는 이조판서 ‘최명길’(이병헌)과 청의 치욕스런 공격에 끝까지 맞서 싸워 대의를 지켜야 한다는 예조판서 ‘김상헌’(김윤석). 그 사이에서 ‘인조’(박해일)의 번민은 깊어지고, 청의 무리한 요구와 압박은 더욱 거세지는데... 나아갈 곳도 물러설 곳도 없는 고립무원의 남한산성. 나라의 운명이 그곳에 갇혔다. </div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://https://d12hfz37g51hrt.cloudfront.net/ppl/medium/4ba6f932cc6261e68913.jpg?1436181379')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">황동혁</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/2b17d49db0ce4c069a01.jpg?1436017496')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이병헌</div>
+                  <div class="modal_div" style="float:left; color:#999">최명길 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e50c608f522d2de85135.jpg?1447082414')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김윤석</div>
+                  <div class="modal_div" style="float:left; color:#999">김상헌 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/df586f312a9b9a48dd73.jpg?1436016924')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">박해일</div>
+                  <div class="modal_div" style="float:left; color:#999">인조 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/ed97a5989e381a102300.jpg?1436179961')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">고수</div>
+                  <div class="modal_div" style="float:left; color:#999">서날쇠 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d160f6c3434811935154.jpg?1436203846')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">박희순</div>
+                  <div class="modal_div" style="float:left; color:#999">이시백 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1507602202/ayjwknkaonf7tlgkpluc.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">부라더</div>
+              <div id="modal_movie_info">2017, 한국, 코미디, 12세 관람가, 1시간 42분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">가보도 팔아먹는 형 VS 집안도 팔아먹는 동생, 제대로 사고 쳤다. 인디아나 존스를 꿈꾸며 유물발굴에 전 재산을 올인 하지만 현실은 늘어나는 빚과 쓸모 없는 장비뿐인 형 '석봉'(마동석), 가문을 대표하는 눈부신 외모와 명석한 두뇌로 잘 나가는 건설 회사에 다니지만 순간의 실수로 실직 위기에 처한 동생 '주봉'(이동휘). 3년 만에 본가로 강제소환(?) 당한 형제는 사고로 '오로라'(이하늬)를 치게 된다. 사고 탓인지 원래 그런 건지, 알 수 없는 말과 돌발 행동으로 형제를 헉(!)하게 만드는 멘탈까지 묘(?)한 여자 오로라. 형제의 인생에 훅 들어온 그녀는 그들에게 엄청난 비밀을 알려주게 되고 오로라의 말에 혹한 석봉과 주봉에게 지긋지긋한 안동은 노다지로 보이기 시작 하는데…</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/0179c077b904356f4606.jpg?1436200594')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">장유정</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/40246078ef76b16e30e3.jpg?1436018093')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">마동석</div>
+                  <div class="modal_div" style="float:left; color:#999">최명길 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/31a80966e64159d8c303.jpg?1494935512')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이동휘</div>
+                  <div class="modal_div" style="float:left; color:#999">김상헌 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e33a3361c5fd3e749d1a.jpg?1436189239')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이하늬</div>
+                  <div class="modal_div" style="float:left; color:#999">인조 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/725af6d774d038376f60.jpg?1496137519')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">조우진</div>
+                  <div class="modal_div" style="float:left; color:#999">서날쇠 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/f4cba5be559861ede1bb.jpg?1436215008')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">송영창</div>
+                  <div class="modal_div" style="float:left; color:#999">이시백 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1507784476/clu16l5nbfaot4yzcjz7.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">블레이드 러너 2049</div>
+              <div id="modal_movie_info">Blade Runner 2049, 2017, 미국, SF, 2시간 43분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">인간과 리플리컨트가 혼재된 2049년. 인간의 통제를 벗어난 리플리컨트를 쫓는 블레이드 러너 ‘K’(라이언 고슬링)는 리플리컨트와 자신을 둘러싼 비밀이 존재함을 깨닫고 오래 전 블레이드 러너로 활약했던 ‘릭 데커드’(해리슨 포드)를 찾아 나선다. 한편, 리플리컨트가 인류의 미래라고 생각하는 ‘니안더 월레스’(자레드 레토)는 자신이 개발한 미래식량의 성공으로 타이렐사를 손에 넣고 전 우주를 식민지화 하기 위해 리플리컨트와 관련된 중요한 단서를 가진 ‘K’를 추적하기 시작하는데…</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/28e4bff85e3634e53fef.jpg?1505358869')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">드니 빌뇌브</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/b7dc4e919fd060409fec.jpg?1499334407')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">라이언 고슬링</div>
+                  <div class="modal_div" style="float:left; color:#999">케이 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/6d976acae74258a13e44.jpg?1505358539')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">해리슨 포드</div>
+                  <div class="modal_div" style="float:left; color:#999">릭 데카드 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e7910ac98a2af4868794.jpg?1505358475')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">아나 디 아르마스</div>
+                  <div class="modal_div" style="float:left; color:#999">조이 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/43573663b10d24c7ef4f.jpg?1505358717')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">실비아 혹스</div>
+                  <div class="modal_div" style="float:left; color:#999">러브 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d8d5d572a0e0442adc1c.jpg?1505359664')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">자레드 레토</div>
+                  <div class="modal_div" style="float:left; color:#999">니안더 울레스 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1506630532/wgupbqs5i2xv3gou13xh.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">노 게임 노 라이프 -제로-</div>
+              <div id="modal_movie_info">No Game No Life Zero, 2017, 일본, 애니메이션, 1시간 47분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">이는 일체의 싸움이 금지되어, 모든 것이 게임으로 정해지는 《반상의 세계(디스보드)》가 창조되기 한참 전에 생긴 일. 세계를 지배하는 유일신의 자리를 둘러싸고, 끝이 보이지 않는 대전이 계속되고 있는 시대. 하늘을 찢고, 땅을 가르고, 별조차도 전부 파괴해 버릴 거 같은 처참한 전쟁은, 싸울 힘을 가지지 못한 인간들을 불합리한 죽음으로 몰아넣는다. 막대한 힘을 가진 여러 종족에 의해 내몰려, 존망의 위기에 처한 인간을 이끄는 젊은 리더의 이름은 리쿠. 그는 한 명이라도 많은 인간을 생존시키기 위해 마음이 찢기고, 소모되는 나날을 계속버텨 왔다. 그런데 어느 날, 리쿠는 방치되어 버려져 있던 엘프의 도시에서 몸이 기계로 되어 있는 소녀 슈비와 만나게 된다. 슈비는 기계는 가실 수 없는 ‘마음’에 흥미를 갖게 되어 에러가 발생하고, 동료들에게 버려진 기체였다. 그녀는 에러를 수정하기 위해 리쿠에게 《인간의 마음》을 가르쳐 달라고 부탁하는데… 이것은 6000년도 지난 머나먼 옛날에 쓰여진 《가장 새로운 신화》로 향하는 《가장 오래된 신화》 기록에도 기억에도 남지 않은, 그 누구도 말할 수 없었던 이야기가 지금, 막이 열린다.</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/da42765b9438bdea5e85.jpg?1436220517')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이시즈카 아츠코</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1360610760')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이구치 유카</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d98c11e8b18ee39b9e72.jpg?1436211305')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">노토 마미코</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/a91693fd4120ec545939.jpg?1436213907')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">사와시로 미루키</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/fba20073fbf0ae8d03b4.jpg?1436221521')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">카야노 아이</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1344076066')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">마츠오카 요시츠구</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1506503130/dou5frej8rswavh8umyn.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">너의 췌장을 먹고 싶어</div>
+              <div id="modal_movie_info">Let Me Eat Your Pancreas, 2017, 일본, 드라마, 1시간 55분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">“너는 싫어할지도 모르겠지만, 역시… 너의 췌장을 먹고 싶어” 나는 그때, 그 말의 의미를 알지 못했다. 스스로를 외톨이로 만드는 ‘나’. 학교 최고의 인기인 ‘그녀’. 어느 날, 우연히 주운 [공병문고]를 통해 나는 그녀와 비밀을 공유하게 되었다. “너 말이야, 정말 죽어?” “...응, 죽어” 그날 이후, 너의 무언가가 조금씩 내게로 옮겨오고 있다.</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d1437e5c329f67d270c3.jpg?1493763071')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">츠키카와 쇼</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1429099069')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">하마베 미나미</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1429099069')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">키타무라 타쿠미</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d8682a571a85e05c6d8c.jpg?1436209873')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">키타가와 케이코</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/fba20073fbf0ae8d03b4.jpg?1436221521')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">카야노 아이</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/5f28aaa2a88c1b2fb52b.jpg?1436206683')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">오구리 슌</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('http://movie.phinf.naver.net/20170419_202/1492577687739hcFG4_JPEG/movie_image.jpg?type=m886_590_2')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">튤립 피버</div>
+              <div id="modal_movie_info">Tulip Fever, 2016, 영국, 미국, 드라마, 1시간 47분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">“튤립 열풍으로 뜨겁던 17세기 암스테르담, 거상 ‘코르넬리스’(크리스토프 왈츠)와 그의 아름다운 신부 ‘소피아’(알리시아 비칸데르), 그리고 이들의 초상화를 그리기 위해 찾아온 화가 ‘얀’(데인 드한), 세 사람 간의 타오르는 사랑과 치명적 거짓을 그린 로맨스 시대극</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/542a0556f158ab5fe7a4.jpg?1436213450')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">저스틴 채드윅</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/0680c3b5d4439abfd70c.jpg?1504173917')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">알리시아 비칸데르</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/31ca1199c5dfd78ad57f.jpg?1494399463')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">카라 델레바인</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/180561ba6aeab40e8e8f.jpg?1453811582')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">홀리 그레인저</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/431531a08b3526dcbf2e.jpg?1464241205')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">크리스토프 발츠</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/32c86e5a72c6c3b6e49b.jpg?1436190098')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">잭 오코넬</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('http://movie.phinf.naver.net/20171012_72/15077704479368f71F_JPEG/movie_image.jpg?type=m886_590_2')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">직쏘</div>
+              <div id="modal_movie_info">Jigsaw, 2017, 미국, 공포, 스릴러, 범죄, 1시간 31분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">도심 한복판에서 사람들이 한 명씩 살해 된 채 곳곳에서 발견된다.
+ 모든 수사 결과와 증거는 이미 사망한 존 크레이머 일명 직쏘를 범인으로 지목하는데…</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/419053630a4008179776.jpg?1436218326')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">마이클 스피어리그</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/8e6d9615814f98f0a9ea.jpg?1436184285')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">토빈 벨</div>
+                  <div class="modal_div" style="float:left; color:#999">직쏘 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/0c7ce8a3fc355a03fec1.jpg?1436179721')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">칼럼 키스 레니</div>
+                  <div class="modal_div" style="float:left; color:#999">할로란 형사 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1344076243')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">클레 베넷</div>
+                  <div class="modal_div" style="float:left; color:#999">키이스 형사 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/b8c98ad08122bcb04093.jpg?1436211858')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">맷 패스모어</div>
+                  <div class="modal_div" style="float:left; color:#999">로건 넬슨 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/32c86e5a72c6c3b6e49b.jpg?1436190098')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">로라 밴더부트</div>
+                  <div class="modal_div" style="float:left; color:#999">엘리노어 보네빌 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1508723664/mpekp10dgjesi3cpxmfd.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">침묵</div>
+              <div id="modal_movie_info">Blackened Heart, 2017, 한국, 드라마, 15세 관람가, 2시간 5분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">재력과 사랑, 세상을 다 가진 남자 ‘임태산’(최민식). 모든 것이 완벽히 행복하다 믿었던 그 날 약혼녀이자 유명 가수인 ‘유나’(이하늬)가 살해 당하고, 용의자로 딸 ‘임미라’(이수경)가 지목된다. 세간의 이목이 집중된 사건, 임태산은 그날의 일을 기억하지 못하는 딸을 무죄로 만들기 위해 자신만의 방식으로 사건을 쫓기 시작한다. 그리고 최고의 변호인단을 마다한 채, 미라의 무죄를 믿고 보듬어줄 젊은 변호사 ‘최희정’(박신혜)을 선임한다. 미라가 기억하지 못하는 시간을 둘러싼 치열한 법정 공방. 하지만 사라진 그날의 CCTV 영상을 갖고 있는 유나의 팬 ‘김동명’(류준열)의 존재가 드러나며 사건은 예상치 못한 방향으로 흘러가는데... 살해된 약혼녀, 용의자가 된 딸. 가장 완벽한 날, 모든 것을 잃었다</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/1f445f1284877e0552df.jpg?1436218912')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">정지우</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/a7906ba7d528ef69e678.jpg?1436205777')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">최민식</div>
+                  <div class="modal_div" style="float:left; color:#999">임태산 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/f6ebcd9fc68d32dcda0b.jpg?1436183149')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">박신혜</div>
+                  <div class="modal_div" style="float:left; color:#999">최희정 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/0f0b71119d7ffa997fa0.jpg?1436222351')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">류준열</div>
+                  <div class="modal_div" style="float:left; color:#999">김동명 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e33a3361c5fd3e749d1a.jpg?1436189239')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이하늬</div>
+                  <div class="modal_div" style="float:left; color:#999">유나 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/3035dcfaf9c603e6650a.jpg?1452531758')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">백해준</div>
+                  <div class="modal_div" style="float:left; color:#999">동성식 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1507800702/woqb98ptuspkvqbg80an.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">토르 : 라그나로크</div>
+              <div id="modal_movie_info">Thor: Ragnarok, 2017, 미국, 판타지, 2시간 10분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">죽음의 여신 헬라가 아스가르드를 침략하고, 세상은 모든 것의 종말 ‘라그나로크’의 위기에 처한다. 헬라에게 자신의 망치마저 파괴당한 토르는 어벤져스 동료인 헐크와도 피할 수 없는 대결을벌이면서 절체절명의 위기에 빠지게 되는데…</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/61143e4257f1a46b9501.jpg?1487222645')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">타이카 와이티티</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/cf3563075ca94dde3042.jpg?1436188398')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">크리스 헴스워스</div>
+                  <div class="modal_div" style="float:left; color:#999">토르 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e93d95e96a42a3a6d772.jpg?1436217051')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">마크 러팔로</div>
+                  <div class="modal_div" style="float:left; color:#999">헐크 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/dd7ddac972ed072552b8.jpg?1436184717')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">톰 히들스턴</div>
+                  <div class="modal_div" style="float:left; color:#999">로키 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e33a3361c5fd3e749d1a.jpg?1436189239')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이하늬</div>
+                  <div class="modal_div" style="float:left; color:#999">유나 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d9a8aa0f8aad0466d2d4.jpg?1496649225')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">케이트 블란쳇</div>
+                  <div class="modal_div" style="float:left; color:#999">헬라 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1508140679/ywojssrxzjkyk5jexdyl.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">미옥</div>
+              <div id="modal_movie_info">A Special Lady, 2016, 한국, 범죄, 1시간 30분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">“이번이 정말 마지막이야”
+범죄조직을 재계 유력기업으로 키워낸 언더보스 ‘현정’(김혜수)은 새로운 시작을 꿈꾸며 은퇴를 준비한다. 그녀를 위해서라면 어떤 일도 서슴지 않았던 조직의 해결사 ‘상훈’(이선균)은 그런 그녀를 이해하지 못한다. 한편, 법조계 라이징스타 ‘최검사’(이희준)는 자신의 치명적인 약점을 붙잡은 현정으로 인해 궁지에 몰리게 되고, 상훈을 이용해 악에 찬 복수를 준비한다. 걷잡을 수 없는 세 사람의 욕망은 점점 파국을 향해 치닫는데… 뜨거운 욕망의 차가운 끝, 이기는 사람이 모두 갖는다.</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1453993404')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이안규</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/6aa1c4fdd77ebb6b4b3d.jpg?1495962886')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김혜수</div>
+                  <div class="modal_div" style="float:left; color:#999">나현정 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/14858be0af9b2fedb2b7.jpg?1436037678')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이선균</div>
+                  <div class="modal_div" style="float:left; color:#999">임상호 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/c0a26369a108b11b2425.jpg?1436204331')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이희준</div>
+                  <div class="modal_div" style="float:left; color:#999">최검사 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/a32ed2be9a16499f4e50.jpg?1436202268')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">최무성</div>
+                  <div class="modal_div" style="float:left; color:#999">김회장 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/94e465fac5ebb2601468.jpg?1436204399')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김민석</div>
+                  <div class="modal_div" style="float:left; color:#999">주환 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1498401969/nbn97sb7dnho5zwimmvc.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">모범생</div>
+              <div id="modal_movie_info">A Good Student, 2014, 한국, 스릴러, 1시간 40분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">여고생인 은별과 하늬는 전교1, 2등을 다투는 학교에서 알아주는 모범생이다. 하늬는 반장이며 성적도 좋고, 돈 많은 집안이고 아이들과의 친화력도 뛰어나 모두들 선망의 대상이다. 은별은 가난한 집안에 엄마랑 함께 살아가고 있다. 가난한 집안의 은별에게 하늬는 의지할수 있는 유일한 친구이다. 어느날, 은별에게 시련이 닥치는데....</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/5b7a30c8aa035089ac13.jpg?1454437178')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이영진</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/bc336d3a3bb2de104d1a.jpg?1454437153')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김효진</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/2b65edd7b3fc42694574.jpg?1454437154')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">강하린</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d787f566abee42068090.jpg?1454437156')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">손우혁</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/a32ed2be9a16499f4e50.jpg?1436202268')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이지선</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/dc47a4a6fc66830c88b0.jpg?1454437158')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">박광일</div>
+                  <div class="modal_div" style="float:left; color:#999"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1507546581/vmpxcjcjmlo2wgmgplb6.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">꾼</div>
+              <div id="modal_movie_info">The Swindlers, 2017, 한국, 범죄</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">희대의 사기꾼을 잡기 위해 한바탕 사기극을 벌이는 사기꾼의 이야기를 그린 영화</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1344076245')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">장창원</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/cb767dd44eb565f3e471.jpg?1436208545')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">현빈</div>
+                  <div class="modal_div" style="float:left; color:#999">황지성 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/3639050c54d0d900688c.jpg?1506330731')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">박성웅</div>
+                  <div class="modal_div" style="float:left; color:#999">곽승건 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/75ed7649b382dd199b12.jpg?1436200338')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">유지태</div>
+                  <div class="modal_div" style="float:left; color:#999">박희수 검사</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/b60e11c5bfb3ecddffa7.jpg?1436211984')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">배성우</div>
+                  <div class="modal_div" style="float:left; color:#999">고석동 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1397725184')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">나나</div>
+                  <div class="modal_div" style="float:left; color:#999">춘자 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1506401203/vpkx11sjxbspgpqedl14.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">신과함께</div>
+              <div id="modal_movie_info">Along With the Gods: The Two Worlds, 2016, 한국, 판타지</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">주인공이 죽어서 49일간 재판을 받는 이야기로 사찰에서 볼 수 있는 시왕도를 기반으로 이야기를 풀어나간다. 네이버에 연재된 웹툰 '신과 함께'를 원작으로 한 영화.</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/fc962e5998cdd41f01ba.jpg?1436190309')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김용화</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/bce0bb21431d559f783f.jpg?1494934911')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">하정우</div>
+                  <div class="modal_div" style="float:left; color:#999">강림 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/6077b39948db2093461f.jpg?1436208730')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">자홍</div>
+                  <div class="modal_div" style="float:left; color:#999">자홍 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/427c0272726c37434196.jpg?1436180304')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">주지훈</div>
+                  <div class="modal_div" style="float:left; color:#999">해원맥</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/792df3c7fec8245ac20a.jpg?1436186072')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김향기</div>
+                  <div class="modal_div" style="float:left; color:#999">덕춘 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/40246078ef76b16e30e3.jpg?1436018093')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">마동석</div>
+                  <div class="modal_div" style="float:left; color:#999">성주신 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466141792/ily8rsxuqw98pdd1b7cv.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">명량</div>
+              <div id="modal_movie_info">ROARING CURRENTS, 2014, 한국, 전쟁, 드라마, 액션, 15세 관람가, 2시간 8분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">1597년 임진왜란 6년, 오랜 전쟁으로 인해 혼란이 극에 달한 조선. 무서운 속도로 한양으로 북상하는 왜군에 의해 국가존망의 위기에 처하자 누명을 쓰고 파면 당했던 이순신 장군(최민식)이 삼도수군통제사로 재임명된다. 하지만 그에게 남은 건 전의를 상실한 병사와 두려움에 가득 찬 백성, 그리고 12척의 배 뿐. 마지막 희망이었던 거북선마저 불타고 잔혹한 성격과 뛰어난 지략을 지닌 용병 구루지마(류승룡)가 왜군 수장으로 나서자 조선은 더욱 술렁인다. 330척에 달하는 왜군의 배가 속속 집결하고 압도적인 수의 열세에 모두가 패배를 직감하는 순간, 이순신 장군은 단 12척의 배를 이끌고 명량 바다를 향해 나서는데...</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/eb53db880d67cb160043.jpg?1436211824')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김한민</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/a7906ba7d528ef69e678.jpg?1436205777')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">최민식</div>
+                  <div class="modal_div" style="float:left; color:#999">이순신 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/2592ee75abc6c4e03c87.jpg?1436014469')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">류승룡</div>
+                  <div class="modal_div" style="float:left; color:#999">구루지마 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/52d7fdd513e161f69696.jpg?1436188973')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">조진웅</div>
+                  <div class="modal_div" style="float:left; color:#999">와키자카 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/4b71e8e864b5bb1ab22a.jpg?1436203947')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">진구</div>
+                  <div class="modal_div" style="float:left; color:#999">임준영 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/40cc7f10765a521dcfb3.jpg?1436216345')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">고경표</div>
+                  <div class="modal_div" style="float:left; color:#999">오둑이 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466064824/u1xclttl5omx8bhvaswj.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">아바타</div>
+              <div id="modal_movie_info">Avatar, 2009, 미국, SF, 액션, 12세 관람가, 2시간 42분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">가까운 미래, 지구는 에너지 고갈 문제를 해결하기 위해 머나먼 행성 판도라에서 대체 자원을 채굴하기 시작한다. 하지만 판도라의 독성을 지닌 대기로 인해 자원 획득에 어려움을 겪게 된 인류는 판도라의 토착민 ‘나비(Na’vi)’의 외형에 인간의 의식을 주입, 원격 조종이 가능한 새로운 생명체 ‘아바타’를 탄생시키는 프로그램을 개발한다.
+한편, 하반신이 마비된 전직 해병대원 ‘제이크 설리(샘 워딩튼)’는 ‘아바타 프로그램’에 참가할 것을 제안 받아 판도라에 위치한 인간 주둔 기지로 향한다. 그 곳에서 자신의 ‘아바타’를 통해 자유롭게 걸을 수 있게 된 ‘제이크’는 자원 채굴을 막으려는 ‘나비(Na’vi)’의 무리에 침투하라는 임무를 부여 받는다. 임무 수행 중 ‘나비(Na’vi)’의 여전사 ‘네이티리(조 샐다나)’를 만난 ‘제이크’는 그녀와 함께 다채로운 모험을 경험하면서 ‘네이티리’를 사랑하게 되고, ‘나비(Na’vi)’들과 하나가 되어간다. 하지만 머지 않아 전 우주의 운명을 결정 짓는 대규모 전투가 시작되면서 ‘제이크’는 최후의 시험대에 오르게 되는데….행성 판도라와 지구의 피할 수 없는 전쟁! 이 모든 운명을 손에 쥔 제이크의 선택은?</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/9f708e6d6ba63ab98fbc.jpg?1460701171')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">제임스 카메론</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/3dea5c2c8fad577fa8d9.jpg?1507070216')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">샘 워싱턴</div>
+                  <div class="modal_div" style="float:left; color:#999">제이크 설리 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/85b88524ce7020d9340e.jpg?1493559800')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">조 셀다나</div>
+                  <div class="modal_div" style="float:left; color:#999">네이티리 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/00becd3743b4625607ed.jpg?1436186791')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">시고니 위버</div>
+                  <div class="modal_div" style="float:left; color:#999">그레이스 박사 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/71ee90c90421f77bc891.jpg?1436183812')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">스티브 랭</div>
+                  <div class="modal_div" style="float:left; color:#999">마일드 쿼리치 대령 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/a493ffa08a774d51270d.jpg?1436187054')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">마셀 로드리게즈</div>
+                  <div class="modal_div" style="float:left; color:#999">트루디 차콘 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466083598/dbboofp11mlh9gxgnxun.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">도둑들</div>
+              <div id="modal_movie_info">The Thieves, 2012, 한국, 범죄, 액션, 15세 관람가, 2시간 15분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">한 팀으로 활동 중인 한국의 도둑 뽀빠이와 예니콜, 씹던껌, 잠파노. 미술관을 터는데 멋지게 성공한 이들은 뽀빠이의 과거 파트너였던 마카오박이 제안한 홍콩에서의 새로운 계획을 듣게 된다. 여기에 마카오박이 초대하지 않은 손님, 감옥에서 막 출소한 금고털이 팹시가 합류하고 6명은 각자 인생 최고의 반전을 꿈꾸며 홍콩으로 향한다. 홍콩에서 한국 도둑들을 기다리고 있는 4인조 중국도둑 첸, 앤드류, 쥴리, 조니. 최고의 전문가들이 세팅된 가운데 서로에 대한 경계를 늦추지 않는 한국과 중국의 도둑들. 팽팽히 흐르는 긴장감 속에 나타난 마카오박은 자신이 계획한 목표물을 밝힌다. 그것은 마카오 카지노에 숨겨진 희대의 다이아몬드. 성공을 장담할 수 없는 위험천만한 계획이지만 2천만 달러의 달콤한 제안을 거부할 수 없는 이들은 '태양의 눈물'을 훔치기 위한 작업에 착수한다. 그러나 진짜 의도를 알 수 없는 비밀스런 마카오박과 그런 마카오박의 뒤통수를 노리는 뽀빠이, 마카오박에게 배신당한 과거의 기억을 잊지 못하는 팹시와 팀보다 눈 앞의 현찰을 먼저 챙기는 예니콜, 그리고 한국 도둑들을 믿지 않는 첸과 중국 도둑들까지. 훔치기 위해 모였지만 목적은 서로 다른 10인의 도둑들은 서서히 자신만의 플랜을 세우기 시작하는데…</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/7c29e76a4e2e7842debf.jpg?1436189745')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">최동훈</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/e50c608f522d2de85135.jpg?1447082414')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김윤석</div>
+                  <div class="modal_div" style="float:left; color:#999">마카오박 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/39c4b0f7b441f3299697.jpg?1436215487')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">전지현</div>
+                  <div class="modal_div" style="float:left; color:#999">애니콜 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/6aa1c4fdd77ebb6b4b3d.jpg?1495962886')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김혜수</div>
+                  <div class="modal_div" style="float:left; color:#999">펩시 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/fe11434062e7ce3f2e53.jpg?1436219999')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이정재</div>
+                  <div class="modal_div" style="float:left; color:#999">뽀빠이 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/987e27ec33f9bed0a936.jpg?1436211095')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김수현</div>
+                  <div class="modal_div" style="float:left; color:#999">잠파노 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466142577/nbqlpscbr5ya0dquzdye.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">7번방의 선물</div>
+              <div id="modal_movie_info">Miracle in Cell No.7, 2012, 한국, 코미디, 드라마, 15세 관람가, 2시간 7분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">최악의 흉악범들이 모인 교도소 7번방에 이상한 놈이 들어왔다. 그는 바로 6살 지능의 딸바보 용구. 평생 죄만 짓고 살아온 7번방 패밀리들에게 떨어진 미션은 바로 용구의 딸 예승이를 외부인 절대 출입금지인 교도소에 반.입.하.는.것. 웃음과 감동 가득한 사상 초유의 합동 작전이 시작된다!</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/7c29e76a4e2e7842debf.jpg?1436189745')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">최동훈</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/2592ee75abc6c4e03c87.jpg?1436014469')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">류승룡</div>
+                  <div class="modal_div" style="float:left; color:#999">용구 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/55e19834c370ec428796.jpg?1436199056')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">갈소원</div>
+                  <div class="modal_div" style="float:left; color:#999">어린 예승 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/f6ebcd9fc68d32dcda0b.jpg?1436183149')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">박신혜</div>
+                  <div class="modal_div" style="float:left; color:#999">큰 예승 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/19a00ea7dc647b478487.jpg?1436208831')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">정진영</div>
+                  <div class="modal_div" style="float:left; color:#999">교도관 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/dd48bc4c579ce8b9563c.jpg?1436209798')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">오달수</div>
+                  <div class="modal_div" style="float:left; color:#999">소양호 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466083698/x1otcxkirkh6veynlkmr.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">광해, 왕이 된 남자</div>
+              <div id="modal_movie_info">Masquerade, 2012, 한국, 드라마, 15세 관람가, 2시간 11분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">왕위를 둘러싼 권력 다툼과 당쟁으로 혼란이 극에 달한 광해군 8년. 자신의 목숨을 노리는 자들에 대한 분노와 두려움으로 난폭해져 가던 광해군은 도승지 허균에게 자신을 대신하여 위협에 노출될 대역을 찾을 것을 지시한다. 이에 허균은 기방의 취객들 사이에 걸쭉한 만담으로 인기를 끌던 하선을 발견한다. 왕과 똑같은 외모는 물론 타고난 재주와 말솜씨로 왕의 흉내도 완벽하게 내는 하선. 영문도 모른 채 궁에 끌려간 하선은 광해군이 자리를 비운 하룻밤 가슴 조이며 왕의 대역을 하게 되는데...</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/f18350f8903d7ad00660.jpg?1436215841')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">추창민</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/2b17d49db0ce4c069a01.jpg?1436017496')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">이병헌</div>
+                  <div class="modal_div" style="float:left; color:#999">광해/하선 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/2592ee75abc6c4e03c87.jpg?1436014469')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">류승룡</div>
+                  <div class="modal_div" style="float:left; color:#999">허균 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/74b707fac14a3ce1fcb3.jpg?1436205095')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">한효주</div>
+                  <div class="modal_div" style="float:left; color:#999">중전 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/7d3ecc9e03db5f560d38.jpg?1436186551')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김인권</div>
+                  <div class="modal_div" style="float:left; color:#999">도부장 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/1debc2a78c448111a053.jpg?1493558851')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">심은경</div>
+                  <div class="modal_div" style="float:left; color:#999">사월이 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+  <section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+    <section id="modal_content">
+      <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+      <section id="modal_intro">
+        <section id="modal_left">
+          <section id="modal_introsection">
+            <section id="modal_poster">
+              <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466148974/bkcfyf6h4ztietpcpfth.jpg')"></div>
+            </section>
+            <section id="modal_movieinfo">
+              <div id="modal_movie_topic">변호인</div>
+              <div id="modal_movie_info">The Attorney, 2013, 한국, 드라마, 15세 관람가, 2시간 7분</div>
+            </section>
+            <section id="modal_moviecontext">
+              <div id="jul">줄거리</div>
+              <div id="text">1980년대 초 부산. 빽도 없고, 돈도 없고, 가방끈도 짧은 세무 변호사 송우석(송강호). 부동산 등기부터 세금 자문까지 남들이 뭐라든 탁월한 사업수완으로 승승장구하며 부산에서 제일 잘나가고 돈 잘 버는 변호사로 이름을 날린다. 마침내 10대 건설 기업의 스카우트 제의까지 받으며 전국구 변호사 데뷔를 코 앞에 둔 송변. 하지만 우연히 7년 전 밥값 신세를 지며 정을 쌓은 국밥집 아들 진우(임시완)가 뜻하지 않은 사건에 휘말려 재판을 앞두고 있다는 소식을 듣는다. 국밥집 아줌마 순애(김영애)의 간절한 부탁을 외면할 수 없어 구치소 면회만이라도 도와주겠다고 나선 송변. 하지만 그곳에서 마주한 진우의 믿지 못할 모습에 충격을 받은 송변은 모두가 회피하기 바빴던 사건의 변호를 맡기로 결심하는데...</div>
+            </section>
+          </section>
+        </section>
+        <section id="modal_right">
+          <ul id="direc_ul">
+            <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1361496358')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">양우석</div>
+                  <div class="modal_div" style="float:left"></div>
+                </section>
+              </section>
+            </li>
+          </ul>
+          <ul id="actor_ul">
+            <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d6d14cdc043f72affdb5.jpg?1436183210')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">송강호</div>
+                  <div class="modal_div" style="float:left; color:#999">송우석 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/dd48bc4c579ce8b9563c.jpg?1436209798')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">오달수</div>
+                  <div class="modal_div" style="float:left; color:#999">박동석 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/5eaf6f1f0868a8e6d1af.jpg?1436206032')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">곽도원</div>
+                  <div class="modal_div" style="float:left; color:#999">차동혁 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d49e7ea8b4d3464e94d5.jpg?1436207624')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">김영애</div>
+                  <div class="modal_div" style="float:left; color:#999">최순애 역</div>
+                </section>
+              </section>
+            </li>
+            <li>
+              <section id="modal_actorczone">
+                <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/be7618fa2dbf97698251.jpg?1494763106')"></section>
+                <section id="modal_actorname" style="font-size:14px">
+                  <div class="modal_div" style="float:left">임시완</div>
+                  <div class="modal_div" style="float:left; color:#999">진우 역</div>
+                </section>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </section> <!-- 모달 끝 -->
+</section> <!-- 모달 끝 -->
+<section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+  <section id="modal_content">
+    <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+    <section id="modal_intro">
+      <section id="modal_left">
+        <section id="modal_introsection">
+          <section id="modal_poster">
+            <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466071704/y20zpnpbmaaphshn3ebd.jpg')"></div>
+          </section>
+          <section id="modal_movieinfo">
+            <div id="modal_movie_topic">해운대</div>
+            <div id="modal_movie_info">Haeundae, 2009, 한국, 드라마, SF, 12세 관람가, 2시간</div>
+          </section>
+          <section id="modal_moviecontext">
+            <div id="jul">줄거리</div>
+            <div id="text">2004년 역사상 유례없는 최대의 사상자를 내며 전세계에 엄청난 충격을 안겨준 인도네시아 쓰나미. 당시 인도양에 원양어선을 타고 나갔던 해운대 토박이 만식은 예기치 못한 쓰나미에 휩쓸리게 되고, 단 한 순간의 실수로 그가 믿고 의지했던 연희 아버지를 잃고 만다. 이 사고 때문에 그는 연희를 좋아하면서도 자신의 마음을 숨길 수 밖에 없다. 그러던 어느 날, 만식은 오랫동안 가슴 속에 담아두었던 자신의 마음을 전하기로 결심하고 연희를 위해 멋진 프로포즈를 준비한다. 한편 국제해양연구소의 지질학자 김휘 박사는 대마도와 해운대를 둘러싼 동해의 상황이 5년전 발생했던 인도네시아 쓰나미와 흡사하다는 엄청난 사실을 발견하게 된다. 그는 대한민국도 쓰나미에 안전하지 않다고 수차례 강조하지만 그의 경고에도 불구하고 재난 방재청은 지질학적 통계적으로 쓰나미가 한반도를 덮칠 확률은 없다고 단언한다. 그 순간에도 바다의 상황은 시시각각 변해가고, 마침내 김휘 박사의 주장대로 일본 대마도가 내려 앉으면서 초대형 쓰나미가 생성된다. 한여름 더위를 식히고 있는 수백만의 휴가철 인파와 평화로운 일상을 보내고 있는 부산 시민들, 그리고 이제 막 서로의 마음을 확인한 만식과 연희를 향해 초대형 쓰나미가 시속 800km의 빠른 속도로 밀려오는데…</div>
+          </section>
+        </section>
+      </section>
+      <section id="modal_right">
+        <ul id="direc_ul">
+          <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466071704/y20zpnpbmaaphshn3ebd.jpg')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">윤제균</div>
+                <div class="modal_div" style="float:left"></div>
+              </section>
+            </section>
+          </li>
+        </ul>
+        <ul id="actor_ul">
+          <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/4c31e683cc1d7d885475.jpg?1436016314')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">설경구</div>
+                <div class="modal_div" style="float:left; color:#999">최만식 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/c157ae4332019d64ca69.jpg?1436206282')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">엄정화</div>
+                <div class="modal_div" style="float:left; color:#999">이유진 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/9ca8120a7efba706f033.jpg?1436013040')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">박주훈</div>
+                <div class="modal_div" style="float:left; color:#999">김휘 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/5dea4ec245924347be82.jpg?1439991754')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">하지원</div>
+                <div class="modal_div" style="float:left; color:#999">강연희 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/7d3ecc9e03db5f560d38.jpg?1436186551')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">김인권</div>
+                <div class="modal_div" style="float:left; color:#999">오동춘 역</div>
+              </section>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </section>
+</section> <!-- 모달 끝 -->
+<section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+  <section id="modal_content">
+    <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+    <section id="modal_intro">
+      <section id="modal_left">
+        <section id="modal_introsection">
+          <section id="modal_poster">
+            <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466064757/g1ssmvbrmijpt9slphvo.jpg')"></div>
+          </section>
+          <section id="modal_movieinfo">
+            <div id="modal_movie_topic">괴물</div>
+            <div id="modal_movie_info">The Host, 2006, 한국, 스릴러, 드라마, SF, 15세 관람가, 1시간 59분</div>
+          </section>
+          <section id="modal_moviecontext">
+            <div id="jul">줄거리</div>
+            <div id="text">한강 둔치로 오징어 배달을 나간 강두, 우연히 웅성웅성 모여있는 사람들 속에서 특이한 광경을 목격하게 된다. 생전 보도 못한 무언가가 한강다리에 매달려 움직이는 것이다. 사람들은 마냥 신기해하며 핸드폰, 디카로 정신 없이 찍어댄다. 그러나 그것도 잠시 정체를 알 수 없는 괴물은 둔치 위로 올라와 사람들을 거침없이 깔아뭉개고, 무차별로 물어뜯기 시작한다. 순식간에 아수라장으로 돌변하는 한강변. 강두도 뒤늦게 딸 현서를 데리고 정신 없이 도망가지만, 비명을 지르며 흩어지는 사람들 속에서, 꼭 잡았던 현서의 손을 놓치고 만다. 그 순간 괴물은 기다렸다는 듯이 현서를 낚아채 유유히 한강으로 사라지는데...</div>
+          </section>
+        </section>
+      </section>
+      <section id="modal_right">
+        <ul id="direc_ul">
+          <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/70702c7d7dce5f60470e.jpg?1436207123')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">봉준호</div>
+                <div class="modal_div" style="float:left"></div>
+              </section>
+            </section>
+          </li>
+        </ul>
+        <ul id="actor_ul">
+          <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/d6d14cdc043f72affdb5.jpg?1436183210')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">송강호</div>
+                <div class="modal_div" style="float:left; color:#999">강두 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/5a8a1b711093a27da473.jpg?1495090760')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">변희봉</div>
+                <div class="modal_div" style="float:left; color:#999">희봉 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/df586f312a9b9a48dd73.jpg?1436016924')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">박해일</div>
+                <div class="modal_div" style="float:left; color:#999">남일 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/f86c16ea9ed8050cd9e4.jpg?1500527148')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">배두나</div>
+                <div class="modal_div" style="float:left; color:#999">남주 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/09457cae7e687dc51e6f.jpg?1436037589')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">고아성</div>
+                <div class="modal_div" style="float:left; color:#999">현서 역</div>
+              </section>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </section>
+</section> <!-- 모달 끝 -->
+<section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+  <section id="modal_content">
+    <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+    <section id="modal_intro">
+      <section id="modal_left">
+        <section id="modal_introsection">
+          <section id="modal_poster">
+            <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466064387/fbaqggvn6kvogmekcl67.jpg')"></div>
+          </section>
+          <section id="modal_movieinfo">
+            <div id="modal_movie_topic">왕의 남자</div>
+            <div id="modal_movie_info">爾: King And The Clown, 2005, 한국, 드라마, 15세 관람가, 1시간 59분</div>
+          </section>
+          <section id="modal_moviecontext">
+            <div id="jul">줄거리</div>
+            <div id="text">조선시대 연산조. 남사당패의 광대 장생(감우성)은 힘있는 양반들에게 농락당하던 생활을 거부하고, 자신의 하나뿐인 친구이자 최고의 동료인 공길(이준기 분)과 보다 큰 놀이판을 찾아 한양으로 올라온다. 타고난 재주와 카리스마로 놀이패 무리를 이끌게 된 장생은 공길과 함께 연산(정진영 분)과 그의 애첩인 녹수(강성연)를 풍자하는 놀이판을 벌여 한양의 명물이 된다. 공연은 대 성공을 이루지만, 그들은 왕을 희롱한 죄로 의금부로 끌려간다. 의금부에서 문초에 시달리던 장생은 특유의 당당함을 발휘해 왕을 웃겨 보이겠다고 호언장담하지만 막상 왕 앞에서 공연을 시작하자 모든 광대들이 얼어붙는다. 장생 역시 극도의 긴장감 속에서 왕을 웃기기 위해 갖은 노력을 하지만 왕은 꿈쩍도 하지 않고... 바로 그 때 얌전하기만 한 공길이 기지를 발휘해 특유의 앙칼진 연기를 선보이자 왕은 못 참겠다는 듯이 크게 웃어버린다. 이들의 공연에 흡족한 왕은 궁 내에 광대들의 거처, 희락원을 마련해 준다. 궁에 들어온 광대들은 신바람이 나서 탐관오리의 비리를 풍자하는 공연을 선보이고, 왕은 즐거워한다. 하지만 중신들의 분위기가 싸늘함을 감지한 왕이 중신 중 한 명을 웃지 않는다며 탐관오리라는 명목으로 형벌을 내리고 연회장엔 긴장감이 감도는데...</div>
+          </section>
+        </section>
+      </section>
+      <section id="modal_right">
+        <ul id="direc_ul">
+          <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/070a1f6d422088221c33.jpg?1495959023')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">이준익</div>
+                <div class="modal_div" style="float:left"></div>
+              </section>
+            </section>
+          </li>
+        </ul>
+        <ul id="actor_ul">
+          <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/cb53ff621377d7f4b446.jpg?1436016276')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">강우성</div>
+                <div class="modal_div" style="float:left; color:#999">장생 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/25f860b68537b0c6b2cb.jpg?1436188852')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">이준기</div>
+                <div class="modal_div" style="float:left; color:#999">공길 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/19a00ea7dc647b478487.jpg?1436208831')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">정진영</div>
+                <div class="modal_div" style="float:left; color:#999">연산 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/33388316f2cea20b54bc.jpg?1436220086')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">강성연</div>
+                <div class="modal_div" style="float:left; color:#999">장녹수 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/f7d0d8440823a5da578d.jpg?1436210382')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">장항선</div>
+                <div class="modal_div" style="float:left; color:#999">신하 처선 역</div>
+              </section>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </section>
+</section> <!-- 모달 끝 -->
+<section class="modal_section" onclick="modalclose()"> <!-- 모달 시작 -->
+  <section id="modal_content">
+    <section id="modal_photo" class="modalphoto" class="modal_classpt" style="background-image:url('http://movie.phinf.naver.net/20170928_291/1506574444863M3Fnz_JPEG/movie_image.jpg?type=m886_590_2')"></section>
+    <section id="modal_intro">
+      <section id="modal_left">
+        <section id="modal_introsection">
+          <section id="modal_poster">
+            <div id="modal_movieposter"  style="background-image:url('https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466148147/me7i5jkb3i1uolm3mwun.jpg')"></div>
+          </section>
+          <section id="modal_movieinfo">
+            <div id="modal_movie_topic">겨울왕국</div>
+            <div id="modal_movie_info">Frozen, 2013, 미국, 애니메이션, 판타지, 전체 관람가, 1시간 48분</div>
+          </section>
+          <section id="modal_moviecontext">
+            <div id="jul">줄거리</div>
+            <div id="text">서로가 최고의 친구였던 자매 ‘엘사’와 ‘안나’. 하지만 언니 ‘엘사’에게는 하나뿐인 동생에게조차 말 못할 비밀이 있다. 모든 것을 얼려버리는 신비로운 힘이 바로 그것. ‘엘사’는 통제할 수 없는 자신의 힘이 두려워 왕국을 떠나고, 얼어버린 왕국의 저주를 풀기 위해 ‘안나’는 언니를 찾아 환상적인 여정을 떠나는데...</div>
+          </section>
+        </section>
+      </section>
+      <section id="modal_right">
+        <ul id="direc_ul">
+          <div style="font-size:16px; font-weight:600; margin-bottom:5px;">감독</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/16b9cc571c84822d39f8.jpg?1436184231')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">크리스 벅</div>
+                <div class="modal_div" style="float:left"></div>
+              </section>
+            </section>
+          </li>
+        </ul>
+        <ul id="actor_ul">
+          <div style="clear:both; padding-top:10px ;font-size:16px; font-weight:600; margin-bottom:5px;">배우</div>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1344076014')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">박지윤</div>
+                <div class="modal_div" style="float:left; color:#999">안나 목소리 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d3sz5r0rl9fxuc.cloudfront.net/assets/default/movie_person/photo_medium-718c859e03b43b26062b2bdf0179909090e2c7553243590aff083486c0b14e15.jpg?1344076014')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">소연</div>
+                <div class="modal_div" style="float:left; color:#999">엘사 목소리 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/371aaa34046d4a9d8d4d.jpg?1436213868')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">크리스틴 벨</div>
+                <div class="modal_div" style="float:left; color:#999">안나 목소리 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/7ba74aaf1214a5361b26.jpg?1436202304')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">이디나 멘젤</div>
+                <div class="modal_div" style="float:left; color:#999">엘사 목소리 역</div>
+              </section>
+            </section>
+          </li>
+          <li>
+            <section id="modal_actorczone">
+              <section id="modal_actorimg" style="background-image:url('https://d12hfz37g51hrt.cloudfront.net/ppl/medium/b646d608f35eb0f4674c.jpg?1496815977')"></section>
+              <section id="modal_actorname" style="font-size:14px">
+                <div class="modal_div" style="float:left">조시 게드</div>
+                <div class="modal_div" style="float:left; color:#999">울라프 목소리 역</div>
+              </section>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </section>
+</section> <!-- 모달 끝 -->
+  <script type='text/javascript'>
+    var x = 1900;
+    var slider = document.getElementById("recent_open");
+    var slideArray = slider.getElementsByTagName("li");
+    var slideMax = slideArray.length - 1;
+    var curSlideNo = 0;
+
+    for (i = 0; i <= slideMax; i++) {
+      if (i == curSlideNo) slideArray[i].style.left = 0;
+      else slideArray[i].style.left = -x + "px";
+    }
+
+    slider.addEventListener('click', function() {
+      changeSlide();
+    }, false);
+
+    var aniStart = false;
+    var next = 1;
+    var changeSlide = function() {
+      if (aniStart === true) return;
+      next = curSlideNo + 1;
+      if (next > slideMax) next = 0;
+      aniStart = true;
+      sliding();
+    }
+
+    function sliding() {
+      var curX = parseInt(slideArray[curSlideNo].style.left, 10);
+      var nextX = parseInt(slideArray[next].style.left, 10);
+      var newCurX = curX + 10;
+      var newNextX = nextX + 10;
+      if (newCurX >= x) {
+        slideArray[curSlideNo].style.left = -x + "px";
+        slideArray[next].style.left = 0;
+        curSlideNo = curSlideNo + 1;
+        if (curSlideNo > slideMax) curSlideNo = 0;
+        aniStart = false;
+        return;
+      }
+      slideArray[curSlideNo].style.left = newCurX + "px";
+      slideArray[next].style.left = newNextX + "px";
+      setTimeout(function() {
+        sliding();
+      }, 0.1);
+    }
+    setInterval(changeSlide, 3000);
+  </script>
+  <script>
+    var btn = document.getElementsByClassName('mdbtn');
+    var modal = document.getElementsByClassName('modal_section');
+
+    function modalclick(idx) {
+      modal[idx-1].style.display = "block";
+    }
+    /*
+    for(i=0; i<btn.length; i++) {
+      btn[i].onclick = function() {
+        var mod = document.getElementById('modal_section_1');
+        mod.style.display = "block";
+        modal[i].style.display = "block";
+      }
+    }
+    for(i=0; i<btn.length; i++) {
+      modal[i].onclick = function() {
+        var tmp = 'modal_section_' + i;
+        document.getElementById(tmp).style.display = "none";
+      }
+    }
+    */
+  </script>
+  <script type="text/javascript">
+    var modal = document.getElementsByClassName('modal_section');
+    function modalclose() {
+      for(i=0; i<modal.length; i++) {
+        modal[i].style.display = "none";
+      }
+    }
+  </script>
+  <script type='text/javascript'>
+    var x = 1900;
+    var slider = document.getElementsByClassName("modalphoto");
+    var slideArray = slider.getElementsByTagName("li");
+    var slideMax = slideArray.length - 1;
+    var curSlideNo = 0;
+
+    for (i = 0; i <= slideMax; i++) {
+      if (i == curSlideNo) slideArray[i].style.left = 0;
+      else slideArray[i].style.left = -x + "px";
+    }
+
+    slider.addEventListener('click', function() {
+      changeSlide2();
+    }, false);
+
+    var aniStart = false;
+    var next = 1;
+    var changeSlide2 = function() {
+      if (aniStart === true) return;
+      next = curSlideNo + 1;
+      if (next > slideMax) next = 0;
+      aniStart = true;
+      sliding2();
+    }
+
+    function sliding2() {
+      var curX = parseInt(slideArray[curSlideNo].style.left, 10);
+      var nextX = parseInt(slideArray[next].style.left, 10);
+      var newCurX = curX + 10;
+      var newNextX = nextX + 10;
+      if (newCurX >= x) {
+        slideArray[curSlideNo].style.left = -x + "px";
+        slideArray[next].style.left = 0;
+        curSlideNo = curSlideNo + 1;
+        if (curSlideNo > slideMax) curSlideNo = 0;
+        aniStart = false;
+        return;
+      }
+      slideArray[curSlideNo].style.left = newCurX + "px";
+      slideArray[next].style.left = newNextX + "px";
+      setTimeout(function() {
+        sliding();
+      }, 0.1);
+    }
+    setInterval(changeSlide, 3000);
+  </script>
+</body>
+</html>

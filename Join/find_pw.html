@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>로그인</title>
+  </head>
+  <style>
+  hr {
+    width: 600px;
+    margin: 10px 0;
+  }
+  hr {
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  body {
+    background-color: #f7f7f7;
+    padding: 0;
+    margin: 0;
+  }
+  input {
+    border: 0;
+    border-bottom: 2px solid #aeaeae;
+    outline: none;
+  }
+  input:focus {
+    border-bottom: 3px solid #0c4da2;
+  }
+  #center {
+    width: 100%;
+  }
+  .mainsection {
+    margin: 0 auto;
+    background: white;
+    width: 740px;
+    margin-top: 110px;
+    padding-bottom: 50px;
+    padding-top: 70px;
+  }
+  #head {
+    clear: both;
+    background-color: #0c4da2;
+    width: 600px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  #form {
+    width: 370px;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+  #idpw {
+    margin-left: 0px;
+    float: left;
+    width: 100px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  #loginline {
+    margin-bottom: 20px;
+  }
+  #loginbtn {
+    width: 100px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 130px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  #loginbtn:hover {
+    cursor: pointer;
+  }
+  .in {
+    font-size: 20px;
+    height: 30px;
+    width: 260px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .in:focus {
+    font-size: 20px;
+  }
+  div > a {
+    color: gray;
+    font-size: 14px;
+  }
+  #findit {
+    margin-left: 50px;
+    margin-top: 5px;
+  }
+  div >a:hover {
+    text-decoration: underline;
+  }
+  #logo_section {
+    width: 100%;
+    height: 45px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background-color: #0c4da2;
+  }
+  #logo {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/spiritum.png');
+    background-size: 100%;
+  }
+  #logo_name {
+    float: left;
+    padding-top: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fae001;
+  }
+  </style>
+  <script>
+    function msgprint() {
+      alert("로그인이 완료되었습니다.");
+    }
+  </script>
+  <body>
+    <section id="center">
+      <section id="logo_section">
+        <a href="../index.html">
+          <div id="logo"></div>
+          <div id="logo_name">영화이야기</div>
+        </a>
+      </section>
+      <section class="mainsection">
+        <div id="head">
+          비밀번호 찾기
+        </div>
+        <form id="form">
+          <div id="loginline">
+            <div id="idpw">아이디 </div>
+            <input id="input_id" class="in" type="text" height="30px">
+          </div>
+          <div id="pwline">
+            <div id="idpw">이메일 </div>
+            <input id="input_pw" class="in" type="email">
+          </div>
+            <input id="loginbtn" type="button" name="" value="이메일 전송" style="border:0" onclick="checkempty()">
+        </form>
+      </section>
+    </section>
+    <script>
+      function dotclick() {
+        history.back();
+      }
+    </script>
+    <script>
+      function checkempty() {
+        var id = document.getElementById('input_id');
+        var pw = document.getElementById('input_pw');
+
+        if(id.value == "") {
+          alert('아이디를 입력해주세요.');
+        }
+        else if(pw.value == "") {
+          alert('이메일을 입력해주세요.');
+        }
+        else {
+          alert('입력하신 주소로 이메일을 보냈습니다. 이메일 인증을 완료해주시고 로그인 하세요.');
+          location.href = "login.html"
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+body {
+  background-color: #fafafa;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+#logo_section {
+  width: 100%;
+  height: 45px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  background-color: #0c4da2;
+}
+#logo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  background-image: url('../../images/spiritum.png');
+  background-size: 100%;
+}
+#logo_name {
+  float: left;
+  padding-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fae001;
+}
+#dot {
+  background-image: url('https://account.samsung.com/accounts/v1/resources/images/v2/btn_close.png');
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#dot:hover {
+  cursor: pointer;
+}
+#center {
+  margin: 0 auto;
+  width: 700px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+#word {
+  margin: 40px 0 30px 550px;
+  font-size: 30px;
+  font-weight: 700;
+}
+#one {
+  padding-top: 50px;
+  padding-left: 40px;
+}
+#up, #down {
+  width: 200px;
+  padding: 20px 15px;
+  background-color: #0c4da2;
+  border-radius: 10px;
+  margin: 0 auto;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+#up {
+  margin-top: 40px;
+}
+#up14 {
+  margin-top: 80px;
+  padding-left: 40px;
+}
+#down {
+  margin-top: 40px;
+}
+#dot {
+  position: relative;
+  top: -60px;
+  left: 1260px;
+}

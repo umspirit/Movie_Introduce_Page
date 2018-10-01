@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/join_form.css">
+  </head>
+  <body>
+    <section id="logo_section">
+      <a href="../index.html">
+        <div id="logo"></div>
+        <div id="logo_name">영화이야기</div>
+      </a>
+    </section>
+    <div id="word">회원 가입</div>
+    <section id="center">
+      <div id="formbox">
+        <div id="idform" style="padding-bottom:5px">
+          <span id="one">아이디</span>
+          <input id="two" class="id_field" type="text">
+        </div>
+        <div id="pwform" style="padding-bottom:5px">
+          <span id="one">비밀번호</span>
+          <input id="two" class="pw_field" type="password">
+        </div>
+        <div id="pw_confirm" style="padding-bottom:5px">
+          <span id="one">비밀번호 확인</span>
+          <input id="two" class="pwconfirm_field" type="password">
+        </div>
+        <div id="nameform" style="padding-bottom:5px">
+          <span id="one">이름</span>
+          <input id="two" class="name_field" type="text">
+        </div>
+        <div id="birthform" style="padding-bottom:5px">
+          <span id="one">생년월일</span>
+          <div id="bbox">
+            <select id="s1" name="">
+              <option value="1">1994</option>
+            </select>
+            <a id="s1">년</a>
+            <select id="s1" name="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <a id=s1>월</a>
+            <select id="s1" name="">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <a id="s1">일</a>
+          </div>
+          <div id="pw_confirm" style="padding-bottom:5px">
+            <span id="one">전화번호</span>
+            <div id="bbox">
+              <input id="h1" class="hp1_field" type="text">&nbsp;&nbsp;-&nbsp;
+              <input id="h2" class="hp2_field" type="text">&nbsp;&nbsp;-&nbsp;
+              <input id="h3" class="hp3_field" type="text">
+            </div>
+          </div>
+          <div id="pw_confirm" style="padding-bottom:5px">
+            <span id="one">이메일</span>
+            <div id="bbox">
+              <input id="h11" class="eid_field" type="text">@
+              <input id="h22" class="edomain_field" type="text">
+            </div>
+          </div>
+          <div id="nameform" style="padding-bottom:5px">
+            <span id="one">주소</span>
+            <input id="address" class="address_field" type="text">
+          </div>
+          <div id="nameform" style="padding-bottom:5px">
+            <input id="address2" class="address2_field" type="text">
+            <a id="one">상세주소</a>
+          </div>
+        </div>
+      </div>
+        <div id="down" onclick="blankcheck()">
+          가입
+        </div>
+      <a href="../index.html">
+        <div id="cancel">
+          취소
+        </div>
+      </a>
+    </section>
+    <script type="text/javascript">
+      var id_field = document.getElementsByClassName('id_field');
+      var pw_field = document.getElementsByClassName('pw_field');
+      var pwconfirm_field = document.getElementsByClassName('pwconfirm_field');
+      var name_field = document.getElementsByClassName('name_field');
+      var hp1_field = document.getElementsByClassName('hp1_field');
+      var hp2_field = document.getElementsByClassName('hp2_field');
+      var hp3_field = document.getElementsByClassName('hp3_field');
+      var eid_field = document.getElementsByClassName('eid_field');
+      var edomain_field = document.getElementsByClassName('edomain_field');
+      var address_field = document.getElementsByClassName('address_field');
+      var address2_field = document.getElementsByClassName('address2_field');
+
+      function blankcheck() {
+        if(id_field[0].value.length < 1) {
+          alert('아이디는 빈 칸을 입력할 수 없습니다.');
+          id_field[0].focus();
+        }
+        else if(pw_field[0].value.length < 1) {
+          alert('비밀번호는 빈 칸을 입력할 수 없습니다.');
+          pw_field[0].focus();
+        }
+        else if(pwconfirm_field[0].value.length < 1) {
+          alert('비밀번호확인은 빈 칸을 입력할 수 없습니다.');
+          pwconfirm_field[0].focus();
+        }
+        else if(pw_field[0].value != pwconfirm_field[0].value) {
+          alert('입력한 비밀번호가 일치하지 않습니다.');
+          pw_field[0].value = '';
+          pwconfirm_field[0].value = '';
+          pw_field[0].focus();
+        }
+        else if(name_field[0].value.length < 1) {
+          alert('이름은 빈 칸이 입력될 수 없습니다.');
+          name_field[0].focus();
+        }
+        else if(hp1_field[0].value.length < 1 || hp2_field[0].value.length < 1 || hp3_field[0].value.length < 1) {
+          alert('전화번호는 빈 칸을 입력할 수 없습니다.');
+          if(hp1_field[0].value.length < 1) {
+            hp1_field[0].focus();
+          }
+          else if(hp2_field[0].value.length < 1) {
+            hp2_field[0].focus();
+          }
+          else {
+            hp3_field[0].focus();
+          }
+        }
+        else if(eid_field[0].value.length < 1) {
+          alert('이메일 아이디는 빈칸을 입력할 수 없습니다.');
+          eid_field[0].focus();
+        }
+        else if(edomain_field[0].value.length < 1) {
+          alert('이메일 도메인은 빈 칸을 입력할 수 없습니다.');
+          edomain_field[0].focus();
+        }
+        else if(address_field[0].value.length < 1) {
+          alert('주소지는 빈 칸을 입력할 수 없습니다.');
+          address_field[0].focus();
+        }
+        else if(address2_field[0].value.length < 1) {
+          alert('상세주소는 빈 칸을 입력할 수 없습니다.');
+          address2_field[0].focus();
+        }
+        else {
+          location.href = "joinok.html";
+        }
+      }
+      function numcheck() {
+
+      }
+    </script>
+  </body>
+</html>

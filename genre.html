@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    * {
+      font-family: "Nanum Gothic", sans-serif;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      overflow-x: hidden;
+      background-color: #eaeaea;
+    }
+    .hover_intro {
+      opacity: 0;
+      z-index: 100;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hover_intro #top_board {
+      position: relative;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      top: 70px;
+      font-size: 19px;
+      text-shadow: 0px 0px 6px black;
+      box-sizing: border-box;
+    }
+    .hover_intro #floor_board {
+      box-sizing: border-box;
+      color: #444444;
+      font-size: 16px;
+      background-color: white;
+      border-radius: 0 0 8px 8px;
+      position: relative;
+      top: 137px;
+      height: 50%;
+      width: 100%;
+      padding: 13px 0 0 15px;
+    }
+    .hover_intro #floor_board div {
+      padding-bottom: 10px;
+    }
+    .hover_intro #floor_board #intro_btn {
+      display: inline-block;
+      padding: 10px 20px 10px 20px;
+      font-size: 16px;
+      background-color: #800000;
+      border-radius: 10px;
+      color: white;
+      margin-left: 38px;
+      margin-top: 3px;
+    }
+    .hover_intro:hover {
+      animation-name: hoverintro_select;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes hoverintro_select {
+      100% {
+        opacity: 1;
+      }
+    }
+    #third_box {
+      clear: both;
+      width: 1500px;
+      height: 700px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    #third_box #box_office {
+      float: left;
+      margin-left: 30px;
+      border-radius: 10px;
+      width: 220px;
+      height: 845px;
+      background-color: white;
+      color: #6d6c83;
+    }
+    #third_box .rank {
+      padding:15px 0px 15px 25px;
+      font-size: 14px;
+    }
+    #third_box .rank:hover {
+      cursor: pointer;
+      text-shadow: 0px 0px 10px white;
+      font-weight: 600;
+      color: white;
+      animation-name: rightgo;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    #third_box .rank:hover:nth-child(1) {
+      border-radius: 10px 10px 0 0;
+    }
+    #third_box .rank:hover:nth-child(18) {
+      border-radius: 0 0 10px 10px;
+    }
+    @keyframes rightgo {
+      100% {
+        padding-left: 35px;
+        background-color: #800000;
+      }
+    }
+    #third_box .rank:nth-child(-n+18) {
+      border-bottom: 1px solid #f0f0f0;
+    }
+    #third_box section {
+      display: inline-block;
+    }
+    #thirdbox_intro {
+      color: black;
+      font-weight: 600;
+      font-size: 20px;
+      padding: 20px 0 20px 30px;
+    }
+    #third_box #left_1,#left_2,#left_3,#left_4,#left_5 {
+      float: left;
+      margin-left: 30px;
+    }
+    #third_box #one,#two {
+      width: 220px;
+      height: 314.28px;
+      margin-bottom: 20px;
+      background-size: 100%;
+      border-radius: 10px;
+    }
+    #third_box #left_1 #one {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466141792/ily8rsxuqw98pdd1b7cv.jpg");
+    }
+    #third_box #left_1 #two {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466064824/u1xclttl5omx8bhvaswj.jpg");
+    }
+    #third_box #left_2 #one {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466083598/dbboofp11mlh9gxgnxun.jpg");
+    }
+    #third_box #left_2 #two {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466142577/nbqlpscbr5ya0dquzdye.jpg");
+    }
+    #third_box #left_3 #one {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466083698/x1otcxkirkh6veynlkmr.jpg");
+    }
+    #third_box #left_3 #two {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466148974/bkcfyf6h4ztietpcpfth.jpg");
+    }
+    #third_box #left_4 #one {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466071704/y20zpnpbmaaphshn3ebd.jpg");
+    }
+    #third_box #left_4 #two {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466064757/g1ssmvbrmijpt9slphvo.jpg");
+    }
+    #third_box #left_5 #one {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466064387/fbaqggvn6kvogmekcl67.jpg");
+    }
+    #third_box #left_5 #two {
+      background-image: url("https://dhgywazgeek0d.cloudfront.net/watcha/image/upload/c_fill,h_400,q_80,w_280/v1466148147/me7i5jkb3i1uolm3mwun.jpg");
+    }
+    </style>
+  </head>
+  <body>
+    <section id="third_box">
+      <section id="box_office">
+        <div class="rank">
+          <span class="rank_topic">역대 1000만 관객 영화</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">평균평점 TOP 영화</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">느와르 영화</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">슈퍼 히어로 영화</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">스포츠 영화</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">범죄</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">드라마</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">코미디</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">로멘스/멜로</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">스릴러</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">전쟁</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">가족</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">판타지</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">액션</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">SF</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">아카데미 수상작</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">칸영화제 수상작</span>
+        </div>
+        <div class="rank">
+          <span class="rank_topic">베를린영화제 수상작</span>
+        </div>
+      </section>
+      <section id="left_1">
+        <div id="one">
+          <div class="hover_intro">
+            <div id="top_board">명량</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">8.87 점</a></div>
+              <div>2014.07.30 개봉</div>
+              <div>장르 : 액션, 드라마</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+        <div id="two">
+          <div class="hover_intro">
+            <div id="top_board">아바타</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">9.06 점</a></div>
+              <div>2009.12.17 개봉</div>
+              <div>장르 : SF, 모험, 액션</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="left_2">
+        <div id="one">
+          <div class="hover_intro">
+            <div id="top_board">도둑들</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">7.60 점</a></div>
+              <div>2012.07.25 개봉</div>
+              <div>장르 : 액션, 액션, 드라마</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+        <div id="two">
+          <div class="hover_intro">
+            <div id="top_board">7번방의 선물</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">8.86 점</a></div>
+              <div>2013.01.23 개봉</div>
+              <div>장르 : 코미디</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="left_3">
+        <div id="one">
+          <div class="hover_intro">
+            <div id="top_board">광해</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">9.23 점</a></div>
+              <div>2012.09.13 개봉</div>
+              <div>장르 : 드라마</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+        <div id="two">
+          <div class="hover_intro">
+            <div id="top_board">변호인</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">9.28 점</a></div>
+              <div>2013.12.18 개봉</div>
+              <div>장르 : 드라마</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="left_4">
+        <div id="one">
+          <div class="hover_intro">
+            <div id="top_board">해운대</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">7.5 점</a></div>
+              <div>2009.07.22 개봉</div>
+              <div>장르 : 모험, 드라마</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+        <div id="two">
+          <div class="hover_intro">
+            <div id="top_board">괴물</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">8.61 점</a></div>
+              <div>2006.07.27 개봉</div>
+              <div>장르 : 액션, 모험, 스릴러</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="left_5">
+        <div id="one">
+          <div class="hover_intro">
+            <div id="top_board">왕의 남자</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">9.2 점</a></div>
+              <div>2005.12.29 개봉</div>
+              <div>장르 : 드라마</div>
+              <span id="intro_btn">자세히 보기</span>
+            </div>
+          </div>
+        </div>
+        <div id="two">
+          <div class="hover_intro">
+            <div id="top_board">겨울왕국</div>
+            <div id="floor_board">
+              <div>평점 : <a style="color:red">9.2 점</a></div>
+              <div>2014.01.16 개봉</div>
+              <div>장르 : 애니메이션, 모험</div>
+              <div id="intro_btn">자세히 보기</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
